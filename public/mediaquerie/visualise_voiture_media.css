@@ -1,0 +1,54 @@
+@media screen and (min-width: 0) and (max-width: 400px){
+    #text_compteur{
+        font-size: 0.7rem !important; padding: 0 0.4rem !important;
+    }
+    #titre_modele_voiture{
+        font-size: 0.7rem !important; padding: 0.5rem 1.5rem 0 1.5rem !important;
+    }
+    #exit_show_images{
+        padding: 0 0.2rem !important;
+    }
+    #exit_show_images img{
+        width: 24px !important; height: 24px !important;
+    }
+    #bouton_precedent, #bouton_suivant{
+        padding: 0 0.7rem;
+    }
+    #bouton_precedent img, #bouton_suivant img{
+        width: 18px !important;
+    }
+    #container_img{
+        padding: 0 4rem 1.5rem 4rem !important;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 700px){
+    #text_compteur{
+        font-size: 0.7rem !important; padding: 0 0.4rem !important;
+    }
+    #titre_modele_voiture{
+        font-size: 0.7rem !important; padding: 0.5rem 1.5rem 0 1.5rem !important;
+    }
+    #exit_show_images{
+        padding: 0 0.2rem !important;
+    }
+    #exit_show_images img{
+        width: 24px !important; height: 24px !important;
+    }
+    #bouton_precedent, #bouton_suivant{
+        padding: 0 0.7rem;
+    }
+    #bouton_precedent img, #bouton_suivant img{
+        width: 18px !important;
+    }
+    #container_img{
+        padding: 0 4rem 1.5rem 4rem !important;
+    }
+
+}
+@media screen and (min-width: 701px) and (max-width: 1000px){
+
+}
+@media screen and (min-width: 1001px){
+
+}
+

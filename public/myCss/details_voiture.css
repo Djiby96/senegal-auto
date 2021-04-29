@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------- Partie du header en haut contenant le gros image background --------------------------- */
+#container_img_background_header{
+    position: relative;
+    height: 30rem;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(0 0, 100% 0,100% 95%, 0% 100%, 0 100%);
+}
+#img_logo_header, #img_background_header, #nom_du_modele{
+    position: absolute;
+}
+#img_logo_header{
+    width: 70px;
+    height: 70px;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+}
+.img-animation{
+    width: 100vw !important;
+    height: 30rem !important;
+}
+#nom_du_modele{
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    margin: auto !important;
+    width: max-content;
+    z-index: 2;
+    background-color: white;
+    font-size: 1rem;
+}
+#img_background_header{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+/* ----------------------------------------------------- Partie contenant les informations de la voiture ------------------------------- */
+
+#container_car_description{
+    display: flex;
+    justify-content: start;
+}
+
+#photo_du_vehicule{
+    width: 15rem;
+    height: 15rem;
+}
+#text_modele{
+    font-size: 0.9rem;
+    border-bottom: 1.5px solid blue;
+    letter-spacing: 0.75px;
+}
+#text_description{
+    font-size: 0.9rem;
+    word-break: break-all;
+    letter-spacing: 0.75px;
+}
+#button_infos_vehicule{
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+#titre_details_vehicule{
+    border-bottom: 1.5px solid blue; font-size: 1.2rem;
+}
+.detail_voiture{
+    font-size: 0.9rem;
+}
+.detail_voiture_value{
+    font-size: 0.8rem;
+}
+#text_partager{
+    font-size: 1rem;
+}
+
+#reseaux_sociaux_icon img{
+    width: 24px;
+    height: 24px;
+}
+
+/* <!-- NOS MARQUES --> */
+#container_marque{
+    width: 1100px; max-width: 90vw !important; overflow-x: scroll !important;
+}
+#nos_marque{
+    margin-left: 2rem;
+}
+.image_marque{
+    width: 130px; height: 70px;
+}

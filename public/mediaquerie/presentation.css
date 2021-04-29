@@ -1,0 +1,41 @@
+@media screen and (min-width: 0) and (max-width: 400px){
+    /* !-- background de l' image -- */
+    #container_text_title{
+        display: none !important;
+    }
+    /* !-- SECTION DE PRESENTATION -- */
+    #description, .description_service{
+        font-size: 0.8rem !important;
+        letter-spacing: 0.5px !important;
+    }
+    /* --  SECTION DES SERVICES -- */
+    #service_essai, #service_entretien_reparation{
+        flex-direction: column-reverse !important;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 700px){
+    /* !-- background de l' image -- */
+    #container_text_title{
+        display: none !important;
+    }
+
+    /* !-- SECTION DE PRESENTATION -- */
+    #description, .description_service{
+        font-size: 0.8rem !important;
+        letter-spacing: 0.5px !important;
+
+    }
+
+    /* --  SECTION DES SERVICES -- */
+    #service_essai, #service_entretien_reparation{
+        flex-direction: column-reverse !important;
+    }
+
+}
+@media screen and (min-width: 701px) and (max-width: 1000px){
+
+}
+@media screen and (min-width: 1001px){
+
+}
+

@@ -1,0 +1,81 @@
+
+/* --------------------------------------------------Face du img background juste en dessous du barre de navigation-------------------------------------- */
+#container_img_background_header{
+    position: relative;
+    height: 25rem;
+    background-image: url("/images_videos/photos_entreprise.jpg");
+    background-size: 100% 100%;
+}
+#img_logo_header, #container_text_title, #couleur_sombre{
+    position: absolute !important;
+}
+#img_logo_header{
+    top: 2rem;
+    left: 2rem;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
+#container_text_title{
+    top: 1rem;
+    right: 4rem;
+    z-index: 2;
+}
+#couleur_sombre{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#devise_title{
+    font-size: 0.8rem;
+}
+
+#text_nom_entreprise{
+    font-size: 1rem;
+}
+
+/* -- SECTION DE PRESENTATION -- */
+#container_presentation{
+    position: relative;
+    top: -17rem;
+    width: 1000px;
+    max-width: 95vw;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+}
+#img_director{
+    width: 125px;
+    height: 100px;
+}
+#description{
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* --  SECTION DES SERVICES -- */
+#section_services{
+    position: relative;
+    top: -17rem;
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.service_name{
+    font-size: 1.2rem;
+}
+.description_service{
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    width: 35rem;
+    max-width: 80vw;
+}
+#img_essai, #img_location{
+    width: 250px;
+    height: 125px;
+}
+.fa-file-signature{
+    font-size: 1.8rem;
+}
+.link_service{
+    font-size: 0.8rem;
+}

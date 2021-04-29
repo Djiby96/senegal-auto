@@ -1,0 +1,15 @@
+
+/* Traitement du css pour la page permettant de voir les photos de voitures pour chaque marques visualise_voiture.html */
+.show_page_details_images{
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 5 !important;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.disabled_page_details_images{
+    display: none;
+}

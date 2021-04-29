@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !-- SECTION FORM SEARCH-- */
+#chercher_voiture{
+    font-size: 1.1rem;
+    font-family: monospace;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+    padding-right: 4rem;
+}
+#input_search{
+    width: 75vw;
+    height: 2.4rem;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+}
+#container_input{
+    border: 1.2px solid rgb(190, 190, 190);
+    border-radius: 5px;
+}
+#input_submit{
+    cursor: pointer;
+    width: 4rem;
+}
+
+/* !-- SECTION DES VOITURES -- */
+.container_img_car{
+    width: max-content;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.container_img_car:hover{
+    opacity: 1 !important;
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.img_car{
+    width: 12rem;
+    height: 8rem;
+}
+.car_modele{
+    font-size: 0.8rem;
+}
+#button_voir_plus{
+    opacity: 0.4;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
+}
+#button_voir_plus:hover{
+    opacity: 1 !important;
+}

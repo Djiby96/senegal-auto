@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* partie traitement du header */
+#section_animation{
+    margin-bottom: 2rem;
+}
+#container-img-background{
+    height: 30rem;
+    clip-path: polygon(0 0, 100% 0,100% 90%, 50% 100%, 0 90%);
+}
+.img-animation{
+    width: 100vw !important;
+    height: 30rem !important;
+}
+.carousel-caption{
+    font-family: cursive;
+    font-size: 1rem;
+}
+.carousel-indicators{
+    z-index: 3 !important;
+}
+
+
+/*-------------------- Section de l' icone car avec le titre 'Toutes nos vehicules' ------------------ */
+#container_icon_car{
+    padding: 1rem 2rem;
+}
+.fa-car{
+    color: white;
+    font-size: 1.5rem;
+}
+.line{
+    width: 4rem;
+    height: 2px;
+    background-color: #007bff;
+    margin-top: 0.45rem;
+}
+.fa-circle{
+    color: #007bff;
+}
+#text_nos_vehicules{
+    font-size: 0.9rem;
+    
+}
+
+/* !-- SECTION DU Triage des voitures -- */
+#select_type_car, #select_filtre{
+    font-size: 1.1rem; width: 10rem; height: 2rem;
+}
+
+
+/* ------------------------------------------------------------ Section montrant les voitures -----------------------------------------*/
+
+/* Partie des voitures */
+#section_voiture{
+    margin-bottom: 2rem;
+}
+.my-container-offre{
+    width: 15rem;
+    position: relative;
+    background-color: white;
+    z-index: 3;
+}
+.img_for_car{
+    width: 100%;
+    height: 8rem;
+}
+.my-prix-fcfa{
+    font-size: 0.8rem;  
+    text-align: center !important;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+.prix-chiffre{
+    font-size: 0.8rem;  
+}
+.text_modele{
+    font-size: 0.7rem;
+    margin: 1rem 0;
+}
+.my-visualise, .my-details{
+    padding: 0.25rem 1.75rem;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.9rem;
+}
+@keyframes zoominfo{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.my-container-detail-show{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    animation: zoominfo 0.25s;
+} 
+.my_container_detail_disabled{
+    display: none;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+}
+#button_voir_plus{
+    border: 0,04rem rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 3rem;
+    cursor: pointer;
+}
+
+/* <!-- NOS MARQUES --> */
+#container_marque{
+    width: 1100px; max-width: 90vw !important; overflow-x: scroll !important;
+}
+#nos_marque{
+    margin-left: 2rem;
+}
+.image_marque{
+    width: 130px; height: 70px;
+}
+
+/*-- Section de l' icone services avec le titre 'Nos services' --*/
+#container_icon_services{
+    padding: 1rem 2rem;
+}
+#text_nos_services{
+    font-size: 0.9rem;
+}
+
+
+/*-- Section services et Offres --*/
+#section_services{
+    margin: 0 0 2rem 0;
+}
+#container_video_background, #color_background_du_video{
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+}
+#container_video_background{
+    z-index: -9;
+}
+#color_background_du_video{
+    background-color: rgba(14, 14, 252, 0.5);
+    z-index: -1;
+}
+#container_services_offre{
+    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+    padding: 5rem 0;
+}
+
+.my_link_service{
+    padding: 3rem 0;
+    width: 20rem;
+    max-width: 80vw;
+    background-color: white;
+    text-decoration: none !important;
+    color: black !important;
+    transition: background-color 0.5s ease;
+}
+.fa-file-signature, .fa-car-side, .fa-wrench, .fa-edit{
+    font-size: 1.2rem;
+}
+.my_link_service:hover{
+    background-color: yellow !important;
+}
+
+.text_garantie_assistance_entretien_achat{
+    font-size: 0.8rem;
+    letter-spacing: 0.75px;
+}
+
+/* <!------------ Section de l' icone des contacts de l'entreprise ----------------> */
+#container_icon_contacts{
+    padding: 1rem 2rem;
+}
+#text_comment_nous_trouver{
+    font-size: 0.9rem;
+}
+
+
+/* ------------------------------------------- Partie comment nous trouver---------------------------------------------- */
+.container_contacts_entreprise{
+    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+    background-image: url("/images_videos/dakar_dem_dikk.jpg");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    z-index: -10;
+    padding: 6rem 1rem;
+    margin-bottom: 5rem;
+
+}
+#img_background_contacts_services{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#heure_travail, #coordonnees{
+    padding: 0 3rem 1rem 3rem;
+}
+
+.text_coordonnees_heure{
+    font-size: 1rem;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+}
+#img_enterprise{
+    width: 80%;
+    height: 30rem;    
+}
+
+
+/* -- Section discution sur Whatsapp -- */
+#section_parlez_nous{
+    position: fixed !important;
+    right: 2rem !important;
+    bottom: 1.5rem !important;
+    text-decoration: none !important;
+    z-index: 4 !important;
+}
+#icon_parlez_nous{
+    width: 40px;
+    height: 40px;
+}

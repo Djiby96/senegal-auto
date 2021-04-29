@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Djiby Sarr">
+    <meta name="description" content="Regarder nos voitures de location et profiter de nos prix imbattables">
+    <link rel="icon" href="/icon_logo/bmw.svg">
+    <title>Location de voitures !</title>
+
+    <!-- boostrap css file -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- boostrap js file -->
+    <script defer src="/bootstrap4_files/js/bootstrap.min.js"></script>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="/myCss/location_vehicule.css">
+
+    <!-- CSS DES SOUS PAGES -->
+    <link rel="stylesheet" href="/myCss/sous_page_location_vehicule.css">
+
+    <!-- Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/location_vehicule_media.css">
+
+    <!-- Js  File-->
+    <script defer src="/javaScript_files/prix.js"></script>
+
+    <script defer src="/javaScript_files/location_vehicule.js"></script>
+
+    <!-- Font awesome js file -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+</head>
+<body>
+    
+    <!-- Inclusion du Navbar -->
+    <header>
+        <%- include('./navigation.html') %>
+    </header>
+
+    <!-- SECTION SLIDER IMAGES -->
+    <section class="mb-4" id="section_animation">
+        <div id="container-img-background" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#container-img-background" data-slide-to="0" class="active"></li>
+                <li data-target="#container-img-background" data-slide-to="1"></li>
+                <li data-target="#container-img-background" data-slide-to="2"></li>
+                <li data-target="#container-img-background" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active"> 
+                    <img src="/images_videos/blue-bmw-sedan-near-green-lawn-grass-170811.jpg" alt="" class="img-animation d-block">
+                    <p class="carousel-caption font-weight-bold rounded">
+                        NOTRE SERVICE DE LOCATION EST SIMPLE ET TRES EFFICACE.
+                    </p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images_videos/car-bmw-z4-93615.jpg" alt="" class="d-block img-animation">
+                    <p class="carousel-caption font-weight-bold rounded">
+                        NOUS DISPOSONS TOUTES LES TYPES DE LOCATIONS <br>
+                        PETITE, MOYENNE ET LONGUE DUREE.
+                    </p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images_videos/image_arriere_plan.jpg" alt="" class="d-block img-animation">
+                    <p class="carousel-caption font-weight-bold rounded">
+                        A DES PRIX IMBATTABLES.
+                    </p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images_videos/white-mercedes-benz-cars-120049.jpg" alt="" class="d-block img-animation">
+                    <p class="carousel-caption font-weight-bold rounded">
+                        UN SERVICE AGREABLE QUI VA VOUS ACCOMPAGNER.
+                    </p>
+                </div>
+            </div>
+            <a href="#container-img-background" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#container-img-background" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION TITRE NOS VOITURES DE LOCATIONS -->
+    <section class="d-flex justify-content-center">
+       <div class="d-flex align-items-center flex-column rounded py-3 px-5" id="container_title">
+            <div class="rounded-circle bg-primary mb-1" id="container_icon_car">
+                <i class="fas fa-car text-white" aria-hidden="true"></i>
+            </div>
+            <h5 class="text-center text-muted" id="title">
+                Nos voitures de locations
+            </h5>
+       </div>
+    </section>
+
+    <!-- SECTION LISTE VOITURES LOCATIONS -->
+    <section class="d-flex justify-content-center align-items-center flex-wrap mx-auto mb-5" id="section_voiture_location">
+        <% if(vehicules_location.length >= 1){ %>
+            <% vehicules_location.forEach((voiture_location) =>{ %>
+                <div href="" class="location_voiture d-flex flex-column rounded m-2 m-lg-3">
+                    <img src="<%=voiture_location.chemin_image%>" class="img_voiture w-100 mb-1" alt="<%=voiture_location.modele %>">
+                    <p class="modele_voiture text-muted px-2 mb-3">
+                        <%=voiture_location.modele %>
+                    </p>
+                    <button type="button" class="button_consulter mx-auto w-50 rounded text-white py-1" tarifs="<%=voiture_location.tarif_par_region%>">
+                        consulter
+                    </button>
+                </div>        
+            <%}) %>
+        <%}else{ %>
+            <div class="d-flex justify-content-center align-items-center flex-column bg-light p-5">
+                <i class="fas fa-folder-open text-muted" aria-hidden="true" style="font-size: 4rem; opacity: 0.4;"></i>
+                <p style="font-size: 0.8rem; letter-spacing: 0.5px;">
+                    Nos voitures de location ne sont pas encore disponible. 
+                </p>
+            </div>
+        <%} %>
+    </section>
+
+   <%if(vehicules_location.length >=1 && button_suivant == "yes"){ %>
+        <section class="d-flex justify-content-center" style="margin-bottom: 5rem;">
+            <a href="/location-vehicules/page=<%=numero%>">
+                <button type="button" class="bg-primary text-white px-4 py-2" style="font-size: 0.9rem; border-radius: 0.6rem;">
+                    Suivant
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </a>
+        </section>
+    <%}%>
+
+    <!-- SECTION DES NUMEROS D' APPELS -->
+    <section class="d-flex flex-column pb-5 mx-auto" id="section_numeros_telephones">
+        <h5 class="bg-primary text-center text-white rounded py-3" style="font-size: 1rem; letter-spacing: 0.25px;">Offres de location</h5>
+        <div class="offre font-weight-bold pl-3 mb-2 mt-4">
+            <i class="fas fa-check" aria-hidden="true" style="color: orangered;"></i>
+            Duree minimum de location 48H.
+        </div>
+        <div class="offre font-weight-bold pl-3 mb-2">
+            <i class="fas fa-check" aria-hidden="true" style="color: orangered;"></i>
+            Nous offrons une réduction ou un forfait pour les locations a longue durée.
+        </div>
+        <div class="offre font-weight-bold pl-3 mb-2">
+            <i class="fas fa-check" aria-hidden="true" style="color: orangered;"></i>
+            Possibilité de locations avec chauffeur disponible. 
+        </div>
+
+        <div class="offre font-weight-bold pl-3 mb-2">
+            <i class="fas fa-check" aria-hidden="true" style="color: orangered;"></i>
+            Offres de location par groupe d’individus pour des évènements, vacance etc…
+        </div>
+
+        <div class="offre font-weight-bold pl-3 mb-4">
+            <i class="fas fa-check" aria-hidden="true" style="color: orangered;"></i>
+            Des locations satisfaisantes à vos besoins.
+        </div>
+        
+        <p class="text-center text-muted px-3" style="font-size: 0.95rem; letter-spacing: 0.25px;">
+            Appelez vite sur ces numeros ou envoyez-nous un couriel
+            pour plus d'informations sur des locations satisfaisant vos besoins.   
+        </p>
+        <span class="text-muted ml-3 ml-lg-5 mb-3" id="telephone_text">
+            <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+            Telephones
+        </span>
+        <div class="d-flex justify-content-center flex-wrap font-weight-bold">
+            <li class="numeros_telephone m-2 m-lg-3">77 778 15 62</li>
+            <li class="numeros_telephone m-2 m-lg-3">77 778 15 62</li>
+            <li class="numeros_telephone m-2 m-lg-3">77 778 15 62</li>
+        </div>
+        <span class="text-muted ml-3 ml-lg-5 mb-3" id="email_text">
+            <i class="fas fa-envelope mr-1" aria-hidden="true"></i>
+            Email
+        </span>
+        <div class="d-flex justify-content-center">
+            <li class="font-weight-bold" id="email_value">Senegal-auto@gmail.com</li>
+        </div>
+    </section>
+
+    <!-- INCLUSION DU PIED DE PAGE -->
+    <footer>
+        <%- include("./footer.html")%>
+    </footer>
+
+
+
+
+    <!-- INCLUSION DES SOUS PAGES -->
+    <section class="tarifs_location_voiture d-flex justify-content-center align-items-center">
+        <%- include("./tarifs_location_voiture.html") %>
+    </section>
+
+
+</body>
+</html>  

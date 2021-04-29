@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Djiby Sarr">
+    <meta name="description" content="Carburant: <%=voiture[0].carburant%>, Boite vitesse: <%=voiture[0].boite_vitesse%>, Annee: <%=voiture[0].annee%>, <%=voiture[0].etat_voiture%>">
+    <meta property="og:image" itemprop="image" content="http://192.168.43.65:9999<%=voiture[0].chemin_image%>">
+    <meta property="og:title" content="<%=voiture[0].marque%>">
+    <meta property="og:url" content="http://192.168.43.65:9999/voiture/<%=voiture[0].modele_concat%>-<%=voiture[0].numero_voiture%>">
+    <meta property="og:description" content="<%=voiture[0].modele%>">
+    <link rel="icon" href="/icon_logo/bmw.svg">
+    <title><%=voiture[0].marque.toUpperCase()%> - <%=voiture[0].modele %></title>
+
+    <!-- JQUERY -->
+    <script defer src="/bootstrap4_files/js/jquery-3.4.1.min.js"></script>
+
+    <!-- BOOSTRAP JS -->
+    <script defer src="/bootstrap4_files/js/bootstrap.min.js"></script>
+
+    <!------ own css for this page --------->
+    <link rel="stylesheet" href="/myCss/details_voiture.css">
+
+    <!-- My Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/details_voiture_media.css">
+
+    <!-- Font awesome js File -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- js for this page -->
+    <script defer type="module" src="/javaScript_files/details_voiture.js"></script>
+    
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <%- include("./navigation.html")%>
+    </header>
+
+    <!-- container background -->
+    <section id="container_img_background_header">
+        <!-- logo -->
+        <img src="/images_videos/peugeot_logo.jpg" alt="" class="rounded" id="img_logo_header">
+
+        <div id="container_img_background_header" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="<%=voiture[0].chemin_image %>" alt="<%=voiture[0].modele %>" class="img-animation d-block">
+                </div>
+                <%for(let i=2; i<=voiture[0].nombre_photos;i++){ %>
+                    <div class="carousel-item">
+                        <img src="<%=voiture[0].chemin_image.substring(0, voiture[0].chemin_image.lastIndexOf('_')+1)+i+'.jpg' %>" alt="<%=voiture[0].modele %>" class="img-animation d-block">
+                    </div>
+                <%} %>
+            </div>
+        </div>
+
+        <!-- le modele de la voiture -->
+        <p class="rounded font-weight-bold py-1 px-3" id="nom_du_modele">
+            <%=voiture[0].modele %>         
+        </p>
+
+        <!-- couleur background -->
+        <div id="img_background_header"></div>
+    </section>
+
+    <!-- contenu du milieu -->
+    <section class="mt-4" style="margin-bottom: 5rem;">
+        <!-- container de la description -->
+        <div>
+            <div class="mb-5"><!--1-->
+                <div id="container_car_description">
+                    <div class="d-flex justify-content-center align-items-center py-1 px-2">
+                        <img src="<%=voiture[0].chemin_image %>" alt="<%=voiture[0].modele %>" id="photo_du_vehicule" nombre-photos="<%=voiture[0].nombre_photos%>" class="rounded">
+                    </div>
+                    <div class="">
+                        <div class="mt-3 mb-4">
+                            <div class="d-flex justify-content-center mb-3 mx-3">
+                                <div id="text_modele" class="font-weight-bold px-1"><%=voiture[0].modele %></div>
+                            </div>
+                            <div class="text-muted text-center px-3 px-lg-4 mb-3" id="text_description">
+                                <%=voiture[0].description %>
+                            </div>
+                            <div class="d-flex justify-content-between px-5 mb-3" id="container_numero_car_date_publication">
+                                <div class="text-muted mr-5">N : <%=voiture[0].numero_voiture %></div>
+                                <div class="font-weight-bold"><%=voiture[0].la_date %></div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <%if(voiture[0].prix){ %>
+                                    <span class="font-weight-bold" style="font-size: 1.3rem; color: purple;"><%=voiture[0].prix_formater %> F CFA</span>
+                                <%}else{ %>
+                                    <span class="font-weight-bold" style="font-size: 1rem; color: orangered;">Prix sur demande</span>
+                                <%} %>
+                                <!-- <button class="bg-success rounded text-white px-3 py-1" id="button_infos_vehicule" type="">Voir plus ...</button> -->
+                            </div>
+                        </div>
+                        <div class="rounded mx-3 mx-lg-4 pt-3" style="box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);">
+                            <span class="font-weight-bold ml-3 px-1" id="titre_details_vehicule">Details du vehicule</span>
+                            <div class="d-flex flex-wrap mt-3">
+                                <%if(voiture[0].marque){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-car" aria-hidden="true"></i>
+                                            Marque
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].marque%>
+                                        </span>
+                                    </div>
+                                <%} %>
+
+                                <%if(voiture[0].modele){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-keyboard text-primary" aria-hidden="true"></i>
+                                            Modele
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].modele%>
+                                        </span>
+                                    </div>
+
+                                <%} %>
+
+                                <%if(voiture[0].annee){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-calendar-times" aria-hidden="true"></i>
+                                            Annee
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].annee%>
+                                        </span>
+                                    </div>
+                                <%} %>
+
+                                <%if(voiture[0].kilometrage){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-tachometer-alt text-primary" aria-hidden="true"></i>
+                                            Kilometrage
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].kilometrage%> Km
+                                        </span>
+                                    </div>
+                                    
+                                <%} %>
+
+                                <%if(voiture[0].carburant){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-oil-can" aria-hidden="true"></i>
+                                            Carburant
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].carburant%>
+                                        </span>
+                                    </div>
+                                    
+                                <%} %>
+
+                                <%if(voiture[0].boite_vitesse){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-digital-tachograph text-primary" aria-hidden="true"></i>
+                                            Boite vitesse
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].boite_vitesse%>
+                                        </span>
+                                    </div>
+                                    
+                                <%} %>
+
+                                <%if(voiture[0].etat_voiture){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-battery-full" aria-hidden="true"></i>
+                                            Etat
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].etat_voiture%>
+                                        </span>
+                                    </div>
+                                <%} %>
+
+                                <%if(voiture[0].couleur){ %>
+                                    <div class="d-flex flex-column m-3 m-lg-4">
+                                        <span class="detail_voiture mb-1">
+                                            <i class="fas fa-tint text-primary" aria-hidden="true"></i>
+                                            Couleur
+                                        </span>
+                                        <span class="detail_voiture_value text-muted ml-3">
+                                            <%=voiture[0].couleur%>
+                                        </span>
+                                    </div>
+                                    
+                                <%} %>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="d-flex flex-column align-items-center"><!--2-->
+                <div id="text_partager" class="ml-5-lg ml-3-sm font-weight-bold mb-3 text-muted">Partager : </div>
+                <div id="reseaux_sociaux_icon" class="d-flex justify-content-start">
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=http://192.168.42.61:9999/details_voiture/1#mercedes_bmw&title=Un nouveau mercedes BMW toute neuve" title="sur facebook"><img src="/icon_logo/facebook.svg" alt="facebook icon" class="mr-5"></a>
+                    <a href="" title="sur twitter"><img src="/icon_logo/twitter.svg" alt="twitter icon" class="mr-5"></a>
+                    <a href="" title="sur instagram"><img src="/icon_logo/Instagram.svg" alt="instagram icon" class="mr-5"></a>
+                    <a href="whatsapp://send?text=*Chez Senegal-auto*" target="_blank" data-action="share/whatsapp/share" title="Un nouvelle voiture toute neuve !"><img src="/icon_logo/whatsapp.svg" alt="whatsapp icon"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NOS MARQUES -->
+    <%if(marques.length >= 1){ %>
+        <section style="margin-bottom: 10rem;">
+            <span class="bg-dark rounded text-white font-weight-bold px-4 py-2" id="nos_marque">NOS MARQUES</span>
+            <div id="container_marque" class="d-flex justify-content-start align-items-center mx-auto py-4 mt-4">
+                <%marques.forEach((voiture) =>{ %>
+                    <a href="/voiture/marque/<%=voiture.marque%>" class="mx-2 mx-lg-3">
+                        <img src="" marque="<%=voiture.marque%>" class="image_marque rounded" alt="">
+                    </a>
+                <%}); %>
+            </div>
+        </section>
+    <%} %>
+
+    <!--pied de page  -->
+    <footer class="mt-5">
+        <%- include("./footer.html")%>
+    </footer>
+    
+</body>
+</html>

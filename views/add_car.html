@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/icon_logo/bmw.svg">
+
+    <!-- Bootstrap4 css -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- Font awesome file -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- css for this  -->
+    <link rel="stylesheet" href="/myCss/add_car.css">
+
+    <!-- JavaScript for this page -->
+    <script defer src="/javaScript_files/add_car.js"></script>
+
+</head>
+<body>
+    <main>
+        <!-- Inclusion du menu de navigation -->
+        <header>
+            <%- include("./admin_nav.html") %>
+        </header>
+
+        <!-- Formular and Presentation section -->
+        <section id="section_form">
+            <div class="d-flex justify-content-center mb-4" id="title">
+                <div class="d-flex justify-content-start">
+                    <h4 class="mr-2" id="text1">Ajout d' un</h4>
+                    <h4 class="bg-primary text-white py-1 px-5" id="vehicule_text">vehicule</h4>
+                </div>
+            </div>
+            <!-- Notification de rendu apres traitement des donnees -->
+            <% if(message === "Data save"){ %>
+                <div class="alert alert-success text-center font-weight-bold mx-lg-5 mx-sm-3" id="message_notification">Les données ont été enregistrées avec succès !</div>
+            <%} else if(message === "Probleme to download files"){ %>
+                <div class="alert alert-danger text-center font-weight-bold mx-lg-5 mx-sm-3" id="message_notification">Désolée ! Un probleme est survenu, veuillez réessayez s’ il vous plait.</div>
+            <%} else if(message === "Server Problem"){ %>
+                <div class="alert alert-danger text-center font-weight-bold mx-lg-5 mx-sm-3" id="message_notification">Problème de serveur, veuillez réessayez ultérieurement s’ il vous plait. </div>
+            <%} else{ }%>
+
+            <form action="/admin/add-car" method="POST" enctype="multipart/form-data" id="form_car">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="mx-5 mb-2">
+                        <div class="d-flex flex-column mb-2">
+                            <label for="Modele" class="">Modele</label>
+                            <input type="text" name="modele" class="py-1 px-2 input_same_size" required>
+                        </div>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="Marque" class="">Marque</label>
+                            <select name="marque" class="py-1 px-2 input_same_size">
+                                <option value="" disabled selected>Choisissez la marque</option>
+                                <option value="Alpine">Alpine</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Alfa Romeo">Alfa Romeo</option>
+                                <option value="Aston Martin">Aston Martin</option>
+                                <option value="Abarth">Abarth</option>
+                                <option value="Ac">Ac</option>
+                                <option value="Acura">Acura</option>
+                                <option value="Allard">Allard</option>
+                                <option value="Alpina">Alpina</option>
+                                <option value="Alvis">Alvis</option>
+                                <option value="Artega">Artega</option>
+                                <option value="Ats">Ats</option>
+                                <option value="Austin">Austin</option>
+                                <option value="AutoBianchi">AutoBianchi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Bentley">Bentley</option>
+                                <option value="Bugatti">Bugatti</option>
+                                <option value="Bertone">Bertone</option>
+                                <option value="Bizzarrini">Bizzarrini</option>
+                                <option value="Brabus">Brabus</option>
+                                <option value="Buick">Buick</option>
+                                <option value="Byton">Byton</option>
+                                <option value="Cadillac">Cadillac</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Citroen">Citroen</option>
+                                <option value="Cupra">Cupra</option>
+                                <option value="Carlsson">Carlsson</option>
+                                <option value="Chrysler">Chrysler</option>
+                                <option value="Connaught">Connaught</option>
+                                <option value="Dacia">Dacia</option>
+                                <option value="Ds">Ds</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ferrari">Ferrari</option>
+                                <option value="Fiat">Fiat</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Infiniti">Infiniti</option>
+                                <option value="Jaguar">Jaguar</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Lamborghini">Lamborghini</option>
+                                <option value="Lancia">Lancia</option>
+                                <option value="Land Rover">Land Rover</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Lotus">Lotus</option>
+                                <option value="Maserati">Maserati</option>
+                                <option value="Mazda">Mazda</option>
+                                <option value="Mclaren">Mclaren</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="Mini">Mini</option>
+                                <option value="Mitsubishi">Mitsubishi</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Opel">Opel</option>
+                                <option value="Peugeot">Peugeot</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Renault">Renault</option>
+                                <option value="Rolls-Royce">Rolls-Royce</option>
+                                <option value="Seat">Seat</option>
+                                <option value="Skoda">Skoda</option>
+                                <option value="Smart">Smart</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Suzuki">Suzuki</option>
+                                <option value="Tesla">Tesla</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Autres">Autres</option>                
+                            </select>
+
+                            <!-- <input type="text" name="marque" class="py-1 px-2 input_same_size" required> -->
+                        </div>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="Annee" class="">Annee</label>
+                            <input type="number" name="annee" class="py-1 px-2 input_same_size" min="1">
+                        </div>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="Carburant" class="">Carburant</label>
+                            <select name="carburant" required class="input_same_size">
+                                <option value=""></option>
+                                <option value="Essence">Essence</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Hybride">Hybride</option>
+                            </select>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label for="etat_voiture" class="">Etat</label>
+                            <select name="etat_voiture" required class="input_same_size">
+                                <option value="Etat de la voiture">Etat de la voiture</option>
+                                <option value="Neuf">Neuf</option>
+                                <option value="Occasion">Occasion</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="Kilometrage" class="">Kilometrage</label>
+                            <input type="number" name="kilometrage" class="py-1 px-2 input_same_size" min="1">
+                        </div>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="Boite vitesse" class="">Boite vitesse</label>
+                            <select name="boite_vitesse" name="boite_vitesse" class="input_same_size" required>
+                                <option value=""></option>
+                                <option value="Automatic">Automatic</option>
+                                <option value="Manuel">Manuel</option>
+                                <option value="Sequenstielle">Sequenstielle</option>
+                            </select>
+                        </div>
+                        <div class="d-flex flex-column mb-2">
+                            <label for="color" class="">Couleur</label>
+                            <input type="text" name="color" class="py-1 px-2 input_same_size" placeholder="Noir, Blanc" required>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-column">
+                                <label for="price" class="">Prix</label>
+                                <input type="number" name="price" class="py-1 px-2 input_same_size"> 
+                            </div>
+                            <div class="text-muted" id="text_comment_prix">NB : Laisse vide si le prix du voiture est negociable. </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center notify_img_chooze disabled_notify_img_chooze">
+                        <div class="message_alert alert alert-success"></div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="button" class="bg-success px-4 py-2 rounded-circle mb-1" id="button_chooze_img_car">
+                            <i class="fas fa-car text-white" aria-hidden="true"></i>
+                        </button>
+                        <div class="text-muted" id="chooze_img_text">Choisir les images du voiture</div>
+                        <input type="file" name="document" id="documents" multiple accept=".jpg, .png, .jpeg" style="display: none;">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="d-flex flex-column">
+                        <label for="description" class="text-muted">Description</label>
+                        <textarea name="description" rows="15" id="textarea_component" class="rounded py-1 px-2" placeholder="Decrire ici les autres details du voiture ..." required></textarea>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary px-5 py-2" id="button_submit">
+                        <span class="spinner_load_to_save_data disabled_spinner_load_to_save_data spinner-border spinner-border-sm mr-4" role="status" aria-hidden="true"></span>
+                        <span class="font-weight-bold">Envoyer</span>
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+        <!-- Pied de page -->
+        <footer id="pied_de_page">
+            <%- include("./footer.html") %>
+        </footer>
+
+    </main>
+</body>
+</html>

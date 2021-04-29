@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- mon css pour ce fichier -->
+    <link rel="stylesheet" href="/myCss/admin_nav.css">
+
+    <!-- mon js pour ce fichier -->
+    <script defer src="/javaScript_files/admin_nav.js"></script>
+
+</head>
+<body>
+
+    <!-- SECTION DU NAVBAR -->
+    <nav class="d-flex justify-content-between px-2 px-sm-4 py-2" id="my_navbar">
+        <!-- logo enterprise -->
+        <div>
+            <a href="/accueil"><img src="/icon_logo/bmw.svg" width="50px" height="50px" id="logo" alt="Senegal-Auto" ></a>
+        </div>
+     
+        <!-- icon menu pour les smarphone -->
+        <button type="menu" class="button_img_menu">
+            <i class="fas fa-bars text-white" aria-hidden="true"></i>
+        </button>
+    </nav>
+
+    <!-- section contenant la grande image background -->
+    <section class="d-flex justify-content-center align-items-center" id="img_backgound_presentation">
+        <!-- pour le couleur transparent -->
+        <div id="transparent_color_img"></div>
+
+        <img  src="/images_videos/peugeot_logo.jpg" class="rounded" alt="senegal auto logo"  id="img_enterprise">
+
+        <img src="/images_videos/dg_sarr_djiby.jpg" alt="admin profil" class="rounded-circle" id="img_admin_profil">
+
+    </section>
+
+    <!-- Menu de navigation de l' admin -->
+    <div class="container_admin_navigation">
+        <div class="menu_navigation_admin bg-white">
+            <div class="rounded py-3" style="background-color: purple;">
+                <div class="d-flex justify-content-center mb-2"><img src="/images_videos/dg_sarr_djiby.jpg" class="rounded-circle" id="img_menu_profil" alt=""></div>
+                <div class="font-weight-bold text-white ml-3" id="admin_name">Mr. Djiby Sarr</div>
+            </div> 
+            <hr id="" class="mx-3">
+            <div class="mb-5">
+                <div class="d-flex flex-column" id="container_text_link">
+                    <a href="http://localhost:9999/admin" class="d-flex justify-content-start rounded mb-2 pl-3 py-1 link_nav_admin">
+                        <i class="icon_link fas fa-car text-muted mt-1 mr-2" aria-hidden="true"></i>
+                        Nos vehicules
+                    </a>
+                    <a href="http://localhost:9999/admin/add-car" class="d-flex justify-content-start rounded mb-2 pl-3 py-1 link_nav_admin">
+                        <i class="icon_link fas fa-car-side text-muted mt-1 mr-2" aria-hidden="true"></i>
+                        Ajouter une voiture
+                    </a>
+                    <a href="http://localhost:9999/admin/ajouter-voiture-location" class="d-flex justify-content-start rounded mb-2 pl-3 py-1 link_nav_admin">
+                        <i class="icon_link fas fa-car-crash text-muted mt-1 mr-2" aria-hidden="true"></i>
+                        Ajout voiture location
+                    </a>
+                    <a href="/admin/vos-messages" class="d-flex justify-content-start rounded pl-3 py-1 link_nav_admin">
+                        <i class="icon_link fas fa-envelope text-muted mt-1 mr-2" aria-hidden="true"></i>
+                        Vos messages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Djiby Sarr">
+    <link rel="icon" href="/icon_logo/bmw.svg">
+
+    <!-- boostrap files -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- css for this page -->
+    <link rel="stylesheet" href="/myCss/ajouter_voiture_location.css"> 
+
+    <!-- My Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/ajouter_voiture_location.css">
+
+    <!-- Font awesome js file -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- js for this page -->
+    <script defer src="/javaScript_files/ajouter_voiture_location.js"></script>
+</head>
+<body>
+
+    <!-- INCLUSION DU MENU DE NAVIGATION ADMIN -->
+    <header>
+        <%- include("./admin_nav.html")%>
+    </header>
+
+    <!-- SECTION FORM -->
+    <section class="rounded mx-auto pb-4 my-5" id="section_form">
+        <div class="bg-dark font-weight-bold rounded text-white py-2 px-3 px-lg-5" id="title">Nouveau voiture de location</div>
+
+        <!-- Messagerie -->
+        <% if(success_message != null && success_message != "" && success_message != undefined){ %>
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-success" style="font-size: 0.9rem;"><%= success_message %></div>
+            </div>
+        <%}else if(error_message != null && error_message != "" && error_message != undefined){%>    
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-danger" style="font-size: 0.9rem;"><%= error_message %></div>
+            </div>
+        <%}%>    
+
+        <form method="POST" action="/ajouter-voiture-location" class="d-flex justify-content-center" id="form">
+            <div>
+                <div class="titre_champ text-muted pl-2">Numero de la voiture</div>
+                <input type="number" name="numero_voiture" min="1" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control rounded mb-3 px-1" required>
+                <div class="titre_champ text-muted pl-2">Tarifs Dakar</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Dakar" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Thies</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Thies" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+    
+                <div class="titre_champ text-muted pl-2">Tarifs Diourbel</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Diourbel" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Kaolack</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Kaolack" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Saint-Louis</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Saint-Louis" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Louga</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Louga" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Fatick</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Fatick" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Tamba</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Tamba" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Kolda</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Kolda" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Matam</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Matam" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Kaffrine</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Kaffrine" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Ziguinchor</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Ziguinchor" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Sedhiou</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Sedhiou" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="titre_champ text-muted pl-2">Tarifs Kedougou</div>
+                <input type="number" name="prix_par_jours" placeholder="tarifs par jours sur Kedougou" onkeydown="return(event.key < 10 && this.value.length<9) || (event.code=='Enter' || event.code=='Backspace')" class="input_form form-control mb-3 rounded px-1" value="0">
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="rounded text-white bg-primary mt-5 py-2 px-5" id="button_envoi">
+                        <span class="mr-1" id="icon_submit">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </span>
+                        Enregistrer
+                    </button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- INCLUSION DU PIED DE PAGE -->
+    <footer style="margin-top: 10rem;">
+        <%- include("./footer.html") %>;
+    </footer>
+
+</body>
+</html>

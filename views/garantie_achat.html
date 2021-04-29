@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garantie Achat de vehicule</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="/myCss/garantie_achat.css">
+
+    <!-- Font awesome js file -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+</head>
+<body>
+
+    <!-- INCLUSION DU NAVIGATION -->
+    <header>
+        <%- include("./navigation.html") %>
+    </header>
+
+    <!-- SECTION IMG BACKGROUND  -->
+    <section class="mb-5" id="contacts_img_header">
+        <!-- color transparent -->
+        <div id="transparent_color"></div>
+
+        <!-- logo entreprise -->
+        <img src="images_videos/peugeot_logo.jpg" class="rounded" id="img_logo" alt="">
+
+        <!-- text presentation -->
+        <div id="text_description" class="bg-white font-weight-bold rounded px-4 py-2 ">Notre service apres vente</div>
+    </section>
+
+    <!-- NOTRE OFFRE D'ESSAI -->
+    <section class="rounded mx-auto py-3 px-4" id="offre_essai" style="margin-bottom: 8rem;">
+        <div class="d-flex justify-content-center align-items-center flex-column mb-4">
+            <img src="/images_videos/reservation_essai.JPG" alt="" class="mb-2" id="img_essai">
+            <h5 class="text-center">Nous vous garantissons notre vehicule d'achat</h5>
+        </div>
+
+        <h5 class="ml-4 rounded-bottom" style="font-size: 1rem;">Fonctionnement :</h5>
+        <p class="text-muted" id="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum harum ipsa neque aliquam dolore aut
+            beatae ipsam pariatur nihil ex libero dignissimos asperiores rerum molestias,
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum harum ipsa neque aliquam dolore aut
+            beatae ipsam pariatur nihil ex libero dignissimos asperiores rerum molestias,
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum harum ipsa neque aliquam dolore aut
+        </p>
+
+    </section>
+
+    <!-- INCLUSION DU PIED DE PAGE -->
+    <footer>
+        <%- include("./footer.html") %>
+    </footer>
+    
+</body>
+</html>

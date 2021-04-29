@@ -1,0 +1,21 @@
+
+
+
+
+.tarifs_location_voiture{
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.25s ease;
+    visibility: hidden;
+}
+.show_tarifs_location_voiture{
+    transform: scale(1) !important;
+    visibility: visible !important;
+}

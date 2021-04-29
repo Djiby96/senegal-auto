@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Css file -->
+    <link rel="stylesheet" href="/myCss/navigation.css">
+    
+    <!-- Boostrap js files -->
+    <script src="/bootstrap4_files/js/jquery-3.4.1.min.js"></script>
+
+    <script defer src="/bootstrap4_files/js/bootstrap.min.js"></script>
+
+    <!-- Boostrap css file -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/navigation_media.css">
+
+    <!-- Js file -->
+    <script defer src="/javaScript_files/navigation.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg px-4 py-3" id="mynavbar">
+        <!-- logo -->
+      <div>
+        <a href=""><img src="/icon_logo/bmw.svg" alt="BMW logo" id="logo_enterprise"></a>
+      </div>
+      <!-- Nom entreprise -->
+      <div class="font-weight-bold mx-auto d-lg-none" id="name_enterprise">Senegal-Auto</div>
+
+      <!-- menu petit ecran -->
+      <button class="navbar-toggler text-white" data-toggle="collapse" data-target="#collapsibleNavbar" id="bouton_menu" type="button">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      
+      <!-- Lien -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mx-auto border-0">
+          <li class="nav-item mr-5 my-nav-item px-3">
+            <a class="nav-link text-body mynav_link_text" href="/">Accueil</a>
+          </li>
+          <li class="nav-item mr-5 my-nav-item px-3">
+            <a class="nav-link text-body mynav_link_text" href="/presentation">Qui sommes-nous</a>
+          </li>
+          <li class="nav-item my-nav-item px-3 position-relative">
+            <a class="nav-link text-body mynav_link_text" href="#">Services et Offres</a>
+            <ul class="position-absolute bg-white" id="container_services_offres_link">
+              <li class="rounded"><a href="/location-vehicules" class="services_offres_link font-weight-bold">location vehicules</a></li>
+              <li class="rounded"><a href="/reservation-essai" class="services_offres_link font-weight-bold">Reservation d' essai</a></li>
+              <li class="rounded"><a href="/garantie-achat" class="services_offres_link font-weight-bold">Garantie d' achat vehicules</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- reseaux sociaux -->
+      <div id="icon_nav" class="d-none d-lg-block">
+        <a href="https://mobile.facebook.com/groups/2029640460436338/" class="mr-2" title="Aimez notre page facebook"><img src="/icon_logo/facebook.svg" class="icon_reseau_sociaux" alt="facebook icon"></a>
+        <a href="" class="mr-2" title="Nous suivre sur twitter"><img src="/icon_logo/twitter.svg" class="icon_reseau_sociaux" alt="twitter icon"></a>
+        <a href="" class="mr-2" title="Suivez nos actualites instagram"><img src="/icon_logo/Instagram.svg" class="icon_reseau_sociaux" alt="instagram icon" ></a>
+        <a href="" class="mr-2" title="Abonnez-vous sur notre chaine youtube"><img src="/icon_logo/youtube.svg" class="icon_reseau_sociaux" alt="youtube icon" ></a>
+        <a href="https://wa.me/+221774893206" title="Envoyez-nous un message sur notre compte Whatsapp"><img src="/icon_logo/whatsapp.svg" class="icon_reseau_sociaux" alt="whatsapp icon" class="mr-2"></a>
+      </div>
+    </nav>
+
+
+    <!-- SECTION NAV MOBILE -->
+    <section class="section_navbar_mobile">
+      <div class="container_link_navbar_mobile rounded bg-white p-2">
+        <div class="d-flex justify-content-between align-items-center px-2 mb-3 mt-2">
+          <img src="/icon_logo/bmw.svg" alt="" id="logo_enterprise_2">
+          <span id="container_window_icon_exit">
+            <i class="text-body fas fa-window-close" aria-hidden="true"></i>
+          </span>
+        </div>
+        <h6 class="mx-auto rounded text-center bg-info text-white py-2 px-5 px-lg-5 mb-4" id="name_of_enterprise">
+          Senegal-auto
+        </h6>
+        <hr class="mx-auto w-75">
+        
+        <ul class="d-flex flex-column">
+          <a href="" class="font-weight-bold links rounded px-2 py-1 mb-1">
+            <i class="fas fa-home mr-1"></i>
+            Accueil
+          </a>
+          <div class="mb-1">
+            <div class="links d-flex justify-content-start font-weight-bold text-body rounded px-2 py-1" id="title_services">
+              <i class="fas fa-arrow-circle-down text-body mr-2" aria-hidden="true" style="margin-top: 0.2rem;"></i>
+              <span class="mr-1">Nos service</span>
+            </div>
+            <ul class="container_link_service d-flex flex-column pl-3">
+              <a href="/location-vehicules" class="mb-1 mt-1">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+                Location de voitures
+              </a>
+              <a href="/reservation-essai" class="mb-1">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+                Reservation d'essai
+              </a>
+              <a href="/garantie-achat" class="mb-1">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+                Garantie d'achat vehicules
+              </a>
+            </ul>
+          </div>
+          <a href="/contacts" class="links font-weight-bold rounded px-2 py-1 mb-1">
+            <i class="fas fa-envelope mr-1" aria-hidden="true"></i>
+            Contactez-nous 
+          </a>
+          <a href="/presentation" class="links font-weight-bold rounded px-2 py-1 mb-1">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            Qui sommes-nous
+          </a>
+        </ul>
+
+      </div>
+    </section>
+    
+</body>
+</html>

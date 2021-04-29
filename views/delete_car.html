@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- css for this page -->
+    <link rel="stylesheet" href="/myCss/delete_car.css">
+
+    <!--JavaScript for this page  -->
+    <script defer src="/javaScript_files/delete_car.js"></script>
+</head>
+<body>
+    <div class="rounded bg-white container_button_delete_cancel py-3 px-2" id="container_button_delete_cancel">
+        <div class="d-flex justify-content-center mb-2" id="container_item_img_delete"><img src="/our_vehicule/01_04_2020_1290_2.jpg" alt="" id="item_img_delete"></div>
+        <div id="title_car" class="text-muted text-center font-weight-bold mb-2"></div>
+        <div class="text-muted ml-3 mb-3" id="ref_car"></div>
+        <div class="d-flex justify-content-between">
+            <a href="" id="delete_link_button">
+                <button type="button" id="button_delete" class="bg-danger text-white py-2 px-3">
+                    <span class="show_spinner remove_spinner spinner-border spinner-border-sm mr-2 text-white" role="status" aria-hidden="true"></span>
+                    <i class="fas fa-trash mr-1" aria-hidden="true"></i>
+                    Supprimer
+                </button>
+            </a>
+            <button type="button" value="Annuler" id="button_cancel" class="bg-success text-white text-white px-3 py-2">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                Annuler
+            </button>
+        </div>
+    </div>
+</body>
+</html>

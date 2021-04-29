@@ -1,0 +1,26 @@
+#text_a_propos, #text_nos_partenaires{
+    font: 1.1rem;
+    font-family: cursive;
+}
+#lien_propos a{
+    text-decoration: none !important;
+    font-size: 0.9rem;
+}
+#lien_propos a:hover{
+    color: blue !important;
+}
+.lien_reseaux_sociaux{
+    text-decoration: none !important;
+}
+.fa-whatsapp{
+    color: greenyellow;
+}
+.fa-facebook{
+    color: white !important;
+}
+.fa-instagram{
+    color: tomato !important;
+}
+.fa-whatsapp, .fa-facebook, .fa-instagram, .fa-twitter{
+    font-size: 1.2rem;
+} 

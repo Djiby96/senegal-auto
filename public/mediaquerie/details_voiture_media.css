@@ -1,0 +1,143 @@
+@media screen and (min-width: 0) and (max-width: 400px){
+    /* --- Partie du header en haut contenant le gros image background --- */
+    #container_img_background_header{
+        clip-path: none;
+    }
+    #img_logo_header{
+        height: 70px !important;
+    }
+    #nom_du_modele{
+        bottom: 12rem !important;
+        font-size: 1.5rem !important;
+        letter-spacing: 0.75px !important;
+    }
+
+    /* --- contenu pour voir les autres informations en plein ecran lorsqu' on clique sur le boutton Voir plus ... --- */
+    #img_sur_la_boite{
+        width: 7rem !important;
+        height: 6rem !important;
+    }
+    .car_attribut, .car_attribut_value{
+        font-size: 0.5rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* --- Partie contenant les informations de la voiture --- */
+    #container_car_description{
+        display: flex;
+        flex-direction: column !important;
+    }
+    #photo_du_vehicule{
+        width: 70vw !important;
+        height: 8rem !important;
+    }
+    #text_modele, #button_infos_vehicule{
+        font-size: 0.6rem !important;
+    }
+    #text_description{
+        font-size: 0.7rem !important;
+        letter-spacing: 1px !important;
+    }
+    #container_numero_car_date_publication, #text_partager{
+        font-size: 0.7rem !important;
+    }
+    #reseaux_sociaux_icon img{
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    /* MARQUES */
+     .image_marque{
+        width: 80px; height: 40px;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 700px){
+    /* --- Partie du header en haut contenant le gros image background --- */
+    #container_img_background_header{
+        clip-path: none;
+    }
+    #img_logo_header{
+        height: 70px !important;
+    }
+    #nom_du_modele{
+        bottom: 9rem !important;
+        font-size: 1.5rem !important;
+        letter-spacing: 0.75px !important;
+    }
+
+    /* --- contenu pour voir les autres informations en plein ecran lorsqu' on clique sur le boutton Voir plus ... --- */
+    #img_sur_la_boite{
+        width: 9rem !important;
+        height: 8rem !important;
+    }
+    .car_attribut, .car_attribut_value{
+        font-size: 0.6rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* --- Partie contenant les informations de la voiture --- */
+    #container_car_description{
+        display: flex;
+        flex-direction: column !important;
+    }
+    #photo_du_vehicule{
+        width: 20rem !important;
+        height: 12rem !important;
+    }
+    #text_modele, #button_infos_vehicule{
+        font-size: 0.7rem !important;
+    }
+    #text_description{
+        font-size: 0.8rem !important;
+        letter-spacing: 1px !important;
+        padding: 0 2rem !important;
+    }
+    #container_numero_car_date_publication, #text_partager{
+        font-size: 0.7rem !important;
+    }
+    #reseaux_sociaux_icon img{
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    /* MARQUES */
+    .image_marque{
+        width: 80px; height: 40px;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1000px){
+    /* --- Partie du header en haut contenant le gros image background --- */
+    #container_img_background_header{
+        clip-path: none;
+    }
+    #nom_du_modele{
+        bottom: 9rem !important;
+        font-size: 1.5rem !important;
+        letter-spacing: 0.75px !important;
+    }
+
+    /* --- contenu pour voir les autres informations en plein ecran lorsqu' on clique sur le boutton Voir plus ... --- */
+    #img_sur_la_boite{
+        width: 14rem !important;
+        height: 10rem !important;
+    }
+    .car_attribut_value, .car_attribut{
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    /* --- Partie contenant les informations de la voiture --- */
+    #container_car_description{
+        display: flex;
+        flex-direction: column !important;
+    }
+    #photo_du_vehicule{
+        width: 25rem !important;
+        height: 12rem !important;
+    }
+    #text_modele, #button_infos_vehicule{
+        font-size: 0.8rem !important;
+    }
+}
+@media screen and (min-width: 1001px){
+
+}

@@ -1,0 +1,7 @@
+
+#text_delete_message{
+    font-size: 0.9rem; letter-spacing: 0.25px;
+}
+#button_delete_message, #button_cancel_delete_message{
+    font-size: 0.8rem; letter-spacing: 0.25px; cursor: pointer; border-radius: 0.5rem;
+}

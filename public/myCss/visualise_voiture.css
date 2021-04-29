@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#conteneur_compteur_and_exit_button, #conteneur_button_next_previous{
+    display: flex;
+    justify-content: space-between;
+}
+#conteneur_button_next_previous{
+    /* border: 1px solid red; */
+    padding: 0 1rem;
+}
+#conteneur_compteur_and_exit_button{
+    margin-top: 1.5rem;
+    /* border: 1px solid red; */
+    padding: 0 1.5rem;
+}
+#titre_modele_voiture{
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    padding: 0.6rem 2.5rem 0 2.5rem;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+}
+#conteneur_button_next_previous{
+    width: 100%;
+    position: absolute;
+    top: 47vh;
+    z-index: 1;
+}
+#text_compteur, #exit_show_images, #bouton_precedent, #bouton_suivant{
+    background: blue;
+    border-radius: 3px;
+}
+#text_compteur{
+    color: white;
+    font-size: 1.15rem;
+    padding: 0 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+} 
+#exit_show_images{
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+}
+#bouton_precedent, #bouton_suivant{
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+}
+#container_img{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 5rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 6rem 1.5rem 6rem;
+    /* border: 2px solid green; */
+}
+#container_img img{
+    /* border: 2px solid yellow; */
+    max-width: 100%;
+    max-height: 100%;
+    animation: animationzoom 0.4s;
+    -webkit-animation: animationzoom 0.4s; /*Pour Safarie */
+}
+
+/* Animation de l' image provenant d' un scale(0) a un scale(1) en millisecondes */
+@keyframes animationzoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes animationzoom{/*Pour le navigateur Safarie ....*/
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}

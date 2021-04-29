@@ -1,0 +1,16 @@
+
+.delete_car_page{
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 4 !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: height 0.1s ease;
+    height: 0;
+    visibility: hidden;
+}
+.show_delete_car_page{
+    height: 100vh !important;
+    visibility: visible !important;
+}

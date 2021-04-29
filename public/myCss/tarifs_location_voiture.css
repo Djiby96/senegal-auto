@@ -1,0 +1,23 @@
+
+#container_tarif_location_voiture{
+    overflow-y: auto !important;
+    width: 30rem; max-width: 90vw; max-height: 90vh !important;
+}
+#window_close{
+    cursor: pointer;
+}
+#window_close svg{
+    font-size: 1.4rem;
+}
+#img_location_tarif{
+    width: 200px; height: 150px;
+}
+#offre_sans_chauffeur{
+    font-size: 0.9rem;
+}
+.region{
+    font-size: 0.8rem;
+}
+.prix_par_region{
+    font-size: 0.9rem; color: purple !important;
+}

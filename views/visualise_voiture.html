@@ -1,0 +1,37 @@
+<!-- Cette page va se charger de montrer les images ou fichiers contenu dans une publication -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="/myCss/visualise_voiture.css">
+
+    <!-- CSS MEDIA QUERIE -->
+    <link rel="stylesheet" href="/mediaquerie/visualise_voiture_media.css">
+</head>
+<body>
+    <!-- conteneur du compteur a gauche et du bouton quitter a droite -->
+        <div id="conteneur_compteur_and_exit_button"><!-- 2-3-->
+            <div id="text_compteur">1/3</div>
+            <div id="titre_modele_voiture"></div>
+            <div id="exit_show_images" title="Quitter">
+                <img src="/icon_logo/button_exit_36px.svg" alt="icon exit">
+            </div>
+        </div> 
+    <!-- Les boutons next et previous -->
+        <div id="conteneur_button_next_previous">
+            <div id="bouton_precedent"><img src="/icon_logo/bouton_precedent_24px.svg" alt="bouton precedent"></div>
+            <div id="bouton_suivant"><img src="/icon_logo/bouton_suivant_24px.svg" alt="bouton suivant"></div>
+        </div>
+    <!-- conteneur pour les images de la publication -->
+        <div id="container_img"><!-- 2-2-->
+            <img id="images_car" src="" alt="">
+        </div>
+
+</body >
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui est Senegal-auto ? </title>
+
+    <!-- Boostrap css file -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+   
+     <!-- Font awesome js file -->
+     <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+     
+    <!-- css for this page -->
+    <link rel="stylesheet" href="/myCss/presentation.css">
+
+    <!-- Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/presentation.css">
+</head>
+<body>
+    <!-- inclusion du menu de navigation -->
+    <header>
+        <%- include("./navigation.html")%>
+    </header>
+
+    <!-- background de l' image -->
+    <section class="mb-5" id="container_img_background_header">
+        <!-- logo -->
+        <img src="/images_videos/peugeot_logo.jpg" class="rounded" alt="" id="img_logo_header">
+
+        <!-- une contenu de description -->
+        <span id="container_text_title" class="">
+            <div class="text-white mb-3 font-weight-bold" id="text_nom_entreprise">Senegal-auto</div>
+            <div class="bg-light rounded py-2 px-3 text-muted" id="devise_title">Votre satisfaction, notre raison d’être.</div>
+        </span>
+
+        <!-- couleur transparent -->
+        <div id="couleur_sombre"></div>
+    </section>
+
+    <!-- SECTION DE PRESENTATION -->
+    <section class="bg-white rounded p-3 mx-auto" id="container_presentation">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <img src="/images_videos/dg_sarr_djiby.jpg" class="rounded mb-2" id="img_director" alt="">
+            <h6 class="text-center">Mr. Djiby Sarr</h6>
+        </div>
+        <p class="text-center text-muted" id="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores dolorum eius impedit quibusdam deleniti dolore nostrum exercitationem,
+            necessitatibus asperiores aliquid ipsa possimus, qui nobis, similique repellendus ullam cupiditate at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores dolorum eius impedit quibusdam deleniti dolore nostrum exercitationem,
+            necessitatibus asperiores aliquid ipsa possimus, qui nobis, similique repellendus ullam cupiditate at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores dolorum eius impedit quibusdam deleniti dolore nostrum exercitationem,
+            necessitatibus asperiores aliquid ipsa possimus, qui nobis, similique repellendus ullam cupiditate at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores dolorum eius impedit quibusdam deleniti dolore nostrum exercitationem,
+            necessitatibus asperiores aliquid ipsa possimus, qui nobis, similique repellendus ullam cupiditate at.
+        </p>
+    </section>
+    
+    <!--  SECTION DES SERVICES -->
+    <section class="mx-auto p-3" id="section_services">
+        <!-- Location vehicules -->
+        <div class="d-flex justify-content-center align-items-center flex-wrap m-4">
+            <img src="/images_videos/location_vehicule.jpg" alt="" id="img_location">
+            <div class="d-flex flex-column m-2 m-lg-5">
+                <div class="service_name text-center font-weight-bold mb-2">Location de vehicules</div>
+                <p class="description_service text-center text-muted">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Provident quae, aperiam quia hic voluptate,
+                    perspiciatis corrupti, blanditiis facilis fuga expedita ipsam.
+                    voluptatibus saepe eveniet sequi iusto explicabo in! Iure, totam.
+                </p>
+                <a href="/location-vehicules" class="link_service font-weight-bold text-right">
+                    voir plus d' informations
+                </a>
+            </div>
+        </div>
+
+        <!-- Reservation d'essai -->  
+        <div class="d-flex justify-content-center align-items-center flex-wrap m-4" id="service_essai">
+            <div class="d-flex flex-column m-2 m-lg-5">
+                <div class="service_name text-center font-weight-bold mb-2">Reservation d'essai</div>
+                <p class="description_service text-center text-muted">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Provident quae, aperiam quia hic voluptate,
+                    perspiciatis corrupti, blanditiis facilis fuga expedita ipsam.
+                    voluptatibus saepe eveniet sequi iusto explicabo in! Iure, totam.
+                </p>
+                <a href="/reservation-essai" class="link_service font-weight-bold text-right">
+                    voir plus d' informations
+                </a>
+            </div>
+            <img src="/images_videos/reservation_essai.JPG" alt="" class="mb-2" id="img_essai">
+        </div>
+
+        <!-- Garantie d'achat vehicules -->
+        <div class="d-flex justify-content-center align-items-center flex-wrap m-4">
+            <div class="container_icon bg-success rounded-circle p-5 m-2 m-lg-5">
+                <i class="fas fa-file-signature text-white" aria-hidden="true"></i>
+            </div>
+            <div class="d-flex flex-column m-2 m-lg-5">
+                <div class="service_name text-center font-weight-bold mb-2">Garantie d'achat vehicules</div>
+                <p class="description_service text-center text-muted">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Provident quae, aperiam quia hic voluptate,
+                    perspiciatis corrupti, blanditiis facilis fuga expedita ipsam.
+                    voluptatibus saepe eveniet sequi iusto explicabo in! Iure, totam.
+                </p>
+                <a href="" class="link_service font-weight-bold text-right">
+                    voir plus d' informations
+                </a>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- inclusion du pied de page -->
+    <footer>
+        <%- include("./footer.html")%>
+    </footer>
+    
+</body>
+</html>

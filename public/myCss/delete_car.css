@@ -1,0 +1,39 @@
+
+
+#container_button_delete_cancel{
+    width: 30rem;
+    max-width: 90vw;
+}
+@keyframes zoom{
+    from{
+        transform: scale(1.1);
+    }
+    10%{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+#item_img_delete{
+    width: 150px;
+    height: 100px;
+}
+#title_car{
+    font-size: 0.8rem;
+}
+
+#button_delete, #button_cancel{
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 0.7rem;
+}
+#ref_car{
+    font-size: 0.9rem;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+.remove_spinner, .remove_icon_delete{
+    display: none !important;
+}

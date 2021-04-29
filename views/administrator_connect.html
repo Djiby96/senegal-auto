@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Administrateur</title>
+    <link rel="icon" href="/icon_logo/bmw.svg">
+
+    <!-- boostrap files -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- Font awesome js File -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- js for this page -->
+    <script defer src="/javaScript_files/administrator_connect.js"></script>
+
+    <!-- css for this page -->
+    <link rel="stylesheet" href="/myCss/administrator_connect.css">
+</head>
+<body>
+    <main>
+         <!-- Inclusion de la barre de navigation -->
+        <header>
+            <%- include("./navigation.html")%>
+        </header>
+
+        <!-- inclusion du corps -->
+        <section class="d-flex justify-content-center align-items-center" id="container_background_img">
+            <!-- logo de l' entreprise -->
+            <img src="/images_videos/peugeot_logo.jpg" class="rounded" alt="" id="img_logo">
+
+            <!-- formulaire de connexion -->
+            <div class="d-flex flex-column py-5 px-4 rounded" id="formulaire_connexion">
+                <div class="d-flex justify-content-center mb-5">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-center mb-2"><img src="/images_videos/logo_connexion.png" alt="" class="rounded-circle border" id="logo_connexion"></div>
+                        <div class="py-2 px-5 bg-success text-white font-weight-bold" id="text_connexion_admin">Connexion Administrateur</div>
+                    </div>
+                </div>
+                <% if(success_message != null && success_message != "" && success_message != undefined){ %>
+                    <div class="alert alert-success text-center mb-3" style="font-size: 0.9rem;"><%=success_message %></div>
+                <%}else if(error_message != null && error_message != "" && error_message != undefined){%>
+                    <div class="alert alert-danger text-center mb-3" style="font-size: 0.9rem;"><%=error_message %></div>
+                <%}%>
+                <div>
+                    <form action="/connect-administrator" method="POST" id="form_connexion">
+                        <div class="d-flex flex-column mb-3">
+                            <label for="email" class="font-weight-bold">Identifiant</label>
+                            <input type="text" name="email" class="px-2 py-2 rounded" id="input_email" placeholder="Votre email" spellcheck="false" required>
+                        </div>
+                        <div class="d-flex flex-column mb-5">
+                            <label for="password" class="font-weight-bold">Mot de passe</label>
+                            <div class="d-flex justify-content-start rounded" id="container_iput_password">
+                                <input type="password" name="password" class="px-2 py-2 rounded w-100" id="input_password" spellcheck="false" required>
+                                <img src="/icon_logo/visibility_30px.svg" class="px-2" alt="" id="img_see_password">
+                            </div>
+                            <span id="password_error" class="text-muted">Au moins 8 caracteres alphanumerique majuscule et minuscule.</span>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="bg-primary text-white px-5 py-2" id="submit_button">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                Se connecter
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+
+        </section>
+
+        <!-- Piedd de page -->
+        <footer>
+            <%- include("./footer.html")%>
+        </footer>
+    
+
+    </main>
+</body>
+</html>

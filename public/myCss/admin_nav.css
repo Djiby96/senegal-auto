@@ -1,0 +1,99 @@
+
+
+/* -- SECTION DU NAVBAR -- */
+#logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.button_img_menu{
+    background-color: purple;
+    border-radius: 5rem !important;
+    padding: 0 1rem;
+    cursor: pointer;
+    outline: none !important;
+    border: none !important;
+    transition: all 0.5s ease;
+}
+.button_img_menu svg{
+    font-size: 0.9rem;
+}
+/*------------------------------------------------------------------ Pour les container du image background au dessus---------------------------------------------- */
+#img_backgound_presentation{
+    background-image: url("/images_videos/administrator.jpg");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 20rem;
+}
+#transparent_color_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+#img_enterprise{
+    position: absolute !important;
+    z-index: 2 !important;
+    top: 1.5rem;
+    left: 2rem;
+    width: 70px;
+    height: 70px;
+}
+
+#img_admin_profil{
+    position: relative;
+    z-index: 2 !important;
+    width: 100px;
+    height: 100px;
+}
+/* ---------------------------------------------------------------------Pour le menu de navigation de l' admin--------------------------------------------------------- */
+.container_admin_navigation{
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    z-index: 3 !important;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.show_container_admin_navigation{
+    visibility: visible;
+}
+.menu_navigation_admin{
+    border-radius: 5px;
+    transform: translateX(-23rem);
+    transition: all 0.4s ease;
+    width: 18rem !important;
+    height: 100vh;
+    overflow-y: auto !important;
+}
+.menu_navigation_width{
+    transform: translateX(0);
+}
+#img_menu_profil{
+    width: 100px;
+    height: 100px;
+}
+#admin_name{
+    font-size: 0.85rem;
+}
+
+.link_nav_admin{
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-decoration: none !important;
+    transition: all 0.5s ease !important;
+}
+.link_nav_admin:hover{
+    background-color: #007bff !important;
+    color: white !important;
+    padding-left: 2rem !important;
+}
+.link_nav_admin:hover .icon_link{
+    color: white !important;
+}

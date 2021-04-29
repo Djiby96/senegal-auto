@@ -1,0 +1,144 @@
+@media screen and (min-width: 0) and (max-width: 400px){
+    /* -- Partie des images background en animation juste apres la barre de navigation -- */
+    #container-img-background{
+        clip-path: none !important;
+        height: 20rem !important;
+    }
+    .img-animation{
+        height: 20rem !important;
+    }
+    .carousel-caption{
+        letter-spacing: 1px !important;
+        color: black !important;
+        background-color: white !important;
+        padding: 0.5rem 2rem !important;
+
+    }
+
+    /* --- Section de presentation des voitures --- */
+    .my-container-offre{
+        width: 9rem !important;
+    }
+    .img_for_car{
+        height: 5rem !important;
+    }
+    .my-prix-fcfa, .prix-chiffre{
+        font-size: 0.5rem !important; 
+        font-weight: bold !important;
+        letter-spacing: 1px !important;
+    }
+    .text_modele{
+        font-size: 0.6rem !important;
+        letter-spacing: 0.75px !important;
+    }
+    .my-visualise, .my-details{
+        padding: 0.25rem 1rem !important;
+        font-size: 0.6rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* MARQUES */
+    .image_marque{
+        width: 80px; height: 40px;
+    }
+
+    /* --- Section de l' icone services avec le titre 'Nos services' --- */
+    #container_video_background{
+        display: none !important;
+    }
+    #color_background_du_video{
+        background-color: rgba(14, 14, 252, 0.2) !important;
+    }
+    .my_link_service{
+        width: 13rem;
+    }
+    .text_garantie_assistance_entretien_achat{
+        font-size: 0.7rem;
+        letter-spacing: 0.75px;
+    }
+
+    /* --- Section de l' icone des contacts de l'entreprise --- */
+    #coordonnees p, #heure_travail p, #heure_travail div{
+        font-size: 0.6rem !important;
+        letter-spacing: 1px !important;
+    }
+    .fa-edit{
+        font-size: 0.8rem !important;
+    }
+    #img_enterprise{
+        height: 18rem !important;
+    }
+
+}
+@media screen and (min-width: 401px) and (max-width: 700px){
+        /* -- Partie des images background en animation juste apres la barre de navigation -- */
+        #container-img-background{
+            clip-path: none !important;
+            height: 20rem !important;
+        }
+        .img-animation{
+            height: 20rem !important;
+        }
+        .carousel-caption{
+            font-size: 1.1rem !important;
+            letter-spacing: 1px !important;
+            color: black !important;
+            background-color: white !important;
+            padding: 0.5rem 2rem !important;
+    
+        }
+    
+        /* --- Section de presentation des voitures --- */
+        .my-container-offre{
+            width: 9rem !important;
+        }
+        .img_for_car{
+            height: 5rem !important;
+        }
+        .my-prix-fcfa, .prix-chiffre{
+            font-size: 0.5rem !important; 
+            font-weight: bold !important;
+            letter-spacing: 1px !important;
+        }
+        .text_modele{
+            font-size: 0.6rem !important;
+            letter-spacing: 0.75px !important;
+        }
+        .my-visualise, .my-details{
+            padding: 0.25rem 1rem !important;
+            font-size: 0.6rem !important;
+            letter-spacing: 1px !important;
+        }
+
+        /* MARQUES */
+        .image_marque{
+            width: 80px; height: 40px;
+        }
+        
+        /* --- Section services et Offres --- */
+        .my_link_service{
+            padding: 1.5rem 0 !important;
+            width: 12rem !important;
+        }
+    
+        /* --- Section de l' icone des contacts de l'entreprise --- */
+        #coordonnees p, #heure_travail p, #heure_travail div{
+            font-size: 0.6rem !important;
+            letter-spacing: 1px !important;
+        }
+        .fa-edit{
+            font-size: 0.8rem !important;
+        }
+        #img_enterprise{
+            height: 18rem !important;
+        }
+    
+
+}
+@media screen and (min-width: 701px) and (max-width: 1000px){
+
+}
+@media screen and (min-width: 1001px){
+
+}
+

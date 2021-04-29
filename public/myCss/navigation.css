@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#mynavbar, #bouton_menu{
+    box-shadow: 2px 2px 5px 0px rgba(0 ,0, 0, 0.2);
+    border: 0.04rem rgba(0 ,0, 0, 0.2);
+}
+#bouton_menu{
+    height: 2.1rem;
+    width: 3rem;
+    background-color: orangered;
+}
+#logo_enterprise{
+    width: 60px;
+    height: 36px;
+}
+#name_enterprise{
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+/* .my-nav-item:hover{
+    background:#007bff;
+    border-radius: 5px;
+} */
+.my-nav-item:hover #mynav_link_text{
+    color: white;
+}
+.mynav_link_text:hover{
+    border: 0;
+    color: blue !important;
+}
+.icon_reseau_sociaux{
+    width: 20px !important;
+    height: 20px !important;
+}
+.mynav_link_text{
+    color: black !important;
+    font-size: 0.8rem;
+}
+
+#container_services_offres_link{
+    top: 2rem !important;
+    z-index: 2 !important;
+    width: max-content;
+    visibility: hidden;
+}
+#container_services_offres_link li{
+    list-style-type: none !important;
+    padding: 0.25rem 0.5rem !important;
+    transition: background-color 0.25s ease;
+}
+#container_services_offres_link li:hover{
+    background-color: #343a40;
+}
+#container_services_offres_link li:hover .services_offres_link{
+    color: white !important;
+}
+
+.services_offres_link{
+    font-size: 0.8rem;
+    text-decoration: none !important;
+    color: blue;
+}
+
+.my-nav-item:nth-of-type(3):hover #container_services_offres_link{
+    visibility: visible !important;
+}
+
+#icon_nav img{
+    width: 32px;
+    height: 32px;
+}
+
+/* !-- SECTION NAV MOBILE -- */
+.section_navbar_mobile{
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 5 !important;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.show_section_navbar_mobile{
+    visibility: visible !important;
+}
+.container_link_navbar_mobile{
+    overflow-y: auto !important;
+    max-width: 75vw !important;
+    transform: translateX(-101%);
+    transition: all 0.4s ease;
+    width: 25rem;
+    height: 100%;
+}
+.show_container_link_navbar_mobile{
+    transform: translateX(0);
+}
+#logo_enterprise_2{
+    width: 40px;
+    height: 30px;
+}
+#container_window_icon_exit, #title_services{
+    cursor: pointer;
+}
+#container_window_icon_exit svg{
+    font-size: 1.6rem;
+}
+#name_of_enterprise{
+    font-size: 1.2rem;
+    width: max-content;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.links, .container_link_service a{
+    color: black !important;
+}
+.container_link_service{
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease;
+}
+.show_container_link_service{
+    height: 7rem !important;
+}

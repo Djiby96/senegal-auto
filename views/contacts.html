@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez Senegal-auto !</title>
+    <link rel="icon" href="/icon_logo/bmw.svg">
+    <meta name="author" content="Djiby Sarr">
+    <meta name="description" content="Contactez l'assistance Senegal-auto et nous vous repondrons dans les minutes qui suivent. Votre satisfaction, notre raison d' etre.">
+    
+    <!-- BOOSTRAP CSS FILES -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- BOOSTRAP JAVASCRIPT FILES -->
+    <script defer src="/bootstrap4_files/js/bootstrap.min.js"></script>
+
+    <!-- FONTAWESOME JS FILE -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- My CSS FILE -->
+    <link rel="stylesheet" href="/myCss/contacts.css">
+
+    <!-- MY JS FILES -->
+    <script defer src="/javaScript_files/contacts.js"></script>
+</head>
+<body>
+    <main>
+
+        <!-- NAVBAR SECTION INCLUDE -->
+        <header>
+            <%- include("./navigation.html") %>
+        </header>
+
+
+        <!-- SECTION IMG BACKGROUND  -->
+        <section id="contacts_img_header">
+            <!-- color transparent -->
+            <div id="transparent_color"></div>
+            <!-- logo entreprise -->
+            <img src="images_videos/peugeot_logo.jpg" class="rounded" id="img_logo" alt="">
+            <!-- text presentation -->
+            <div id="text_description" class="bg-white font-weight-bold rounded px-4 py-2 ">Contacts ...</div>
+        </section>
+
+        <!-- SECTION MESSAGE -->
+        <section class="d-flex justify-content-center mt-4 mb-5">
+            <div class="bg-primary rounded text-center text-white p-3  px-lg-4" id="message">
+                <span class="font-weight-bold" id="senegal_auto_text">
+                    <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                    Senegal-auto
+                </span> !<br>
+                Salut, appelez-nous ou envoyez-nous ou message,<br> 
+                nous vous repondrons dans les minutes qui suivent.
+            </div>
+        </section>
+
+
+        <!-- SECTION TEXT 'ENVOYEZ-NOUS UN MESSAGE' -->
+        <section class="ml-3 mt-5" id="text_send_message">
+            <span>Envoyez-nous 
+                <span class="bg-secondary font-weight-bold text-white rounded pr-5 py-2 pl-2" id="text_message">un message</span> 
+            </span>
+        </section>
+
+
+        <!-- SECTION FORM TO SEND MESSAGE -->
+        <section class="d-flex justify-content-center align-items-center flex-column bg-light py-5 mb-5" id="section_form">
+            <!-- message error -->
+            <% if(success_message != null && success_message != "" && success_message != undefined){ %>
+                <div class="d-flex justify-content-center">
+                    <div class="alert alert-success"><%=success_message %></div>
+                </div>
+            <%}else if(error_message != null && error_message != "" && error_message != undefined){%>
+                <div class="d-flex justify-content-center">
+                    <div class="alert alert-danger"><%=error_message %></div>
+                </div>
+            <%}%>
+             
+            <!-- form -->
+            <form action="/send-message" method="POST" class="bg-white p-3 px-lg-4" id="form">
+                <!-- Firstname -->
+                <div class="label">Prenom</div>
+                <input type="text" name="firstname" class="input_form rounded form-control p-1 mb-2" value="<%=firstname %>">
+
+                <!-- Lastname -->
+                <div class="label">Nom</div>
+                <input type="text" name="lastname" class="input_form rounded form-control p-1 mb-2" value="<%=lastname %>">
+
+                <!-- Call number -->
+                <div class="label">Telephone (obligatoire)</div>
+                <input type="number" name="phone_number" class="input_form rounded form-control p-1 mb-2" value="<%=phone_number %>">
+
+                <!-- Email -->
+                <div class="label">Email</div>
+                <input type="email" name="email" class="input_form rounded form-control p-1 mb-2" value="<%=email %>">
+
+                <!-- Message -->
+                <div class="label">Message</div>
+                <textarea name="message" class="form-control rounded p-1 mb-4" cols="30" rows="10" value="yuqweyeqw"></textarea>
+
+                <!-- Submit Button -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="rounded bg-primary text-white py-2 px-4">
+                        <span id="icon_submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyez
+                        </span>
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+
+        <!-- SECTION TEXT 'APPELEZ-NOUS' -->
+        <section class="ml-4">
+            <span class="bg-success rounded text-white font-weight-bold pr-5 py-2 pl-2" id="text_appelez_nous">Appelez-nous</span>
+        </section>
+
+
+        <!-- SECTION CONTACTS ENTERPRISE -->
+        <section class="d-flex justify-content-center align-items-center flex-wrap" id="entreprise_contacts">
+            <!-- arriere plan blue -->
+            <div id="blue_background"></div>
+
+            <!-- INFORMATION ENTERPRISE -->
+            <div class="rounded m-3" id="coordonnees">
+                <div class="d-flex justify-content-center mb-3">
+                    <div id="text_coordonnees" class="text-body bg-light font-weight-bold">Coordonnees</div>
+                </div>
+                <div class="d-flex justify-content-start mb-2">
+                    <img src="/icon_logo/email_white_24px.svg" alt="">
+                    <div class="mx-2 text-white font-weight-bold">Email :</div>
+                    <div class="text-white font-weight-bold">Senegal-auto@gmail.com</div>
+                </div>
+                <div class="d-flex justify-content-start mb-3">
+                    <img src="/icon_logo/icon_telephone_white_24px.svg" alt="">
+                    <div class="ml-2 text-white font-weight-bold">Telephone :</div>
+                </div>
+                <div class="pl-5 mb-2">
+                    <div class="text-white font-weight-bold mb-2">77 737 83 83</div>
+                    <div class="text-white font-weight-bold mb-2">78 838 83 28</div>
+                    <div class="text-white font-weight-bold"> 76 883 74 23</div>
+                </div>
+                <div class="d-flex justify-content-start mb-2">
+                    <img src="/icon_logo/icon_telephone_fixed_white_24px.svg" alt="">
+                    <div class="ml-2 text-white font-weight-bold">Fixe :</div>
+                </div>
+                <div class="font-weigth-bold text-white font-weight-bold pl-5">33 654 33 33</div>
+            </div>
+            <div class="rounded m-3" id="visites">
+                <div class="d-flex justify-content-center mb-3">
+                    <div id="text_coordonnees" class="text-body bg-light font-weight-bold">Rendez-nous visite.</div>
+                </div>
+                <div class="d-flex justify-content-start mb-2">
+                    <img src="/icon_logo/horaire_white_24px.svg" alt="">
+                    <div class="ml-2 text-white font-weight-bold">Horaire :</div>
+                </div>
+                <div class="mb-3 pl-5">
+                    <div class="mb-2 text-white font-weight-bold">Du lundi au vendredi : 08h-19h</div>
+                    <div class="mb-2 text-white font-weight-bold">Le Samedi: 09h-12h</div>
+                </div>
+                <div class="d-flex justify-content-start mb-3">
+                    <img src="/icon_logo/icon_localisation_white_24px.svg" alt="">
+                    <div class="ml-2 text-white font-weight-bold">Adresse :</div>
+                </div>
+                <div class="d-flex justify-content-start mb-2">
+                    <img src="/icon_logo/icon_bus_tatas_white_24px.svg" alt="">
+                    <div class="ml-2 text-white font-weight-bold">Les vehicules passant chez-nous</div>
+                </div>
+                <div class="pl-5 text-white font-weight-bold mb-2">Tata : 29, 38, 42, 67</div>
+                <div class="pl-5 text-white font-weight-bold">Dakar Dem Dikk : 129, 105, 227</div>
+            </div>
+        
+
+        </section>
+
+
+        <!--INCLUDE FOOTER PAGE  -->
+        <footer>
+            <%-include("./footer.html") %>
+        </footer>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Djiby Sarr">
+    <title>Messages clients</title>
+    <link rel="icon" href="/icon_logo/bmw.svg">
+
+    <!-- boostrap files -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- css for this page -->
+    <link rel="stylesheet" href="/myCss/vos_messages.css">
+
+    <!-- My Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/vos_messages_media.css">
+
+    <!-- CSS DES SOUS PAGES -->
+    <link rel="stylesheet" href="/myCss/sous_page_vos_messages_include.css">
+
+    <!-- Font awesome js file -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- js for this page -->
+    <script defer src="/javaScript_files/vos_messages.js"></script>
+
+    <!-- JS DES SOUS PAGES -->
+    <script defer src="/javaScript_files/sous_page_delete_message_interface.js"></script>
+
+    <title></title>
+</head>
+<body>
+
+    <!-- INCLUSION DU MENU DE NAVIGATION ADMIN -->
+    <header>
+        <%- include("./admin_nav.html") %>
+    </header>    
+
+    <!-- TITRE DES MESSAGES -->
+    <section class="d-flex justify-content-center my-5">
+        <h5 class="bg-dark text-white py-2 px-5" id="title">Messages clientels.</h5>
+    </section>
+
+    <%if(lines_count && messages_count){ %>
+
+        <!-- SECTION DES MESSAGES -->
+        <section class="mx-auto mb-5" id="section_messages">
+            <!-- nombre messages -->
+            <div class="bg-primary rounded font-weight-bold text-white py-2 px-4 mb-5" id="nombre_messages"><%=lines_count %> messages</div>
+
+            <!-- message succes ou erreur -->
+            <% if(success_message != null && success_message != "" && success_message != undefined){ %>
+                <div class="alert alert-success text-center mx-auto" style="font-size: 0.8rem; letter-spacing: 0.5px; width: max-content;"><%=success_message %></div>
+            <%}else if(error_message != null && error_message != "" && error_message != undefined){%>
+                <div class="alert alert-danger text-center mx-auto" style="font-size: 0.8rem; letter-spacing: 0.5px; width: max-content;"><%=error_message %></div>
+            <%}%>
+
+            <!-- affichages des messages -->
+            <%messages.forEach((message) =>{ %>
+
+                <div class="bloc_messages rounded border-bottom pt-1 px-3 mb-2">
+                    <div class="d-flex justify-content-start">
+                       <span class="first_letter_name rounded-circle bg-dark text-white text-center text-capitalize font-weight-bold mr-2"><%=message.first_letter %></span>
+                       <div class="d-flex justify-content-between w-100">
+                           <div class="mr-3">
+                                <div class="client_name text-capitalize"><%=message.name %></div>
+                                <div class="d-flex flex-wrap">
+                                    <a href="sms:+221<%=message.telephone %>" class="contacts text-muted mr-2">
+                                        <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                                        <%=message.telephone %>
+                                    </a>
+                                    <%if(message.email){ %>
+                                        <a href="mailto:<%=message.email%>?subject=Reponse Senegal-auto" class="contacts contact_email d-flex text-lowercase text-muted text-underline">
+                                            <i class="fas fa-envelope mr-1" aria-hidden="true" style="margin-top: 0.15rem;"></i>
+                                            <%=message.email %>
+                                        </a>
+                                    <%} %>
+                                </div>
+                           </div>
+                           <div class="container_icon_ellipsis" id-message="<%=message.id_message %>">
+                               <i class="fas fa-ellipsis-v text-muted font-weight-bold" aria-hidden="true"></i>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <span class="icon_angle_down">
+                            <i class="fas fa-angle-down text-muted" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="container_message_date">
+                        <p class="messages text-muted">
+                            <%=message.message %>
+                        </p>
+                        <div class="date_messages d-flex justify-content-end text-center text-muted mb-2"><%=message.date_message %> a <%=message.heure %></div>
+                        <div class="d-flex justify-content-center">
+                            <span class="icon_angle_up">
+                                <i class="fas fa-angle-up text-muted font-weight-bold" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            <%})%>
+
+            <!-- boutton suivant -->
+            <% if(numero_suivant){ %>
+                <div class="d-flex justify-content-center mt-5">
+                    <a href="/admin/vos-messages/partie-<%=numero_suivant %>">
+                        <button type="button" class="text-white bg-primary px-4 py-2" id="next_button">
+                            Suivant
+                            <i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+            <%} %>
+        </section>
+    
+        <!-- SECTION BOUTON SUPPRIMER TOUT -->
+        <section style="margin-bottom: 10rem; margin-top: 5rem;">
+            <a href="/admin/vos-messages/supprimer-tout" class="border ml-3 ml-lg-5">
+                <button type="button" class="text-white bg-danger px-3 py-2" id="delete_button_all_messages">
+                    <i class="fas fa-times mr-1" aria-hidden="true"></i>
+                    Supprimer tous les messages
+                </button>
+            </a>
+        </section>
+    
+    <%}else{ %>
+
+        <!-- SECTION A MONTRER SI IL Y A PAS DE MESSAGES -->
+        <section class="d-flex justify-content-center flex-column align-items-center" style="margin-bottom: 10rem;">
+            <i class="fas fa-envelope text-muted" aria-hidden="true" style="font-size: 3rem; opacity: 0.5;"></i>
+            <p class="text-muted" style="font-size: 0.8rem; letter-spacing: 0.5px;">
+                Aucun message trouve !
+            </p>
+        </section>
+
+    <%} %>
+
+    <!-- INCLUSION DU PIED DE PAGE -->
+    <footer>
+        <%- include("./footer.html") %>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- INCLUSION DES SOUS PAGES -->
+
+    <!-- sous page pour la suppression d'un message -->
+    <section class="delete_message_interface d-flex justify-content-center align-items-center">
+        <%- include("./delete_message_interface.html") %>
+    </section>
+
+
+</body>
+</html>

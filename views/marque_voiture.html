@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Djiby Sarr">
+    <meta name="description" content="Vente de voiture au Senegal sur GGB-AUTOMOBILE">
+    <title>Senegal-auto</title>
+    <link rel="icon" href="/icon_logo/bmw.svg">
+
+    <!-- BOOSTRAP CSS -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- JQUERY -->
+    <script defer src="/bootstrap4_files/js/jquery-3.4.1.min.js"></script>
+
+    <!-- BOOSTRAP JS -->
+    <script defer src="/bootstrap4_files/js/bootstrap.min.js"></script>
+
+    <!-- css for this page -->
+    <link rel="stylesheet" href="/myCss/marque_voiture.css">
+    
+    <link rel="stylesheet" href="/myCss/page_include_in_accueil.css">
+
+    <!-- My Media querie css -->
+    <link rel="stylesheet" href="/mediaquerie/accueil_media.css">
+
+    <!-- Font awesome js file -->
+    <script defer src="/javaScript_files/fontawesome_5.13.0/all.js"></script>
+
+    <!-- js for this page -->
+    <script defer type="module" src="/javaScript_files/marque_voiture.js"></script>
+
+    <!-- JS LOAD ANIMATION WHEN PAGE IS LOAD -->
+    <script async src="/javaScript_files/document_load_animation.js"></script>
+    
+    <script defer src="/javaScript_files/visualise_voiture.js"></script>
+
+</head>
+<body>
+
+    <!-- ANIMATION WHEN PAGE IS LOAD -->
+    <section id="animation_load">
+        <%- include("./document_load_animation.html") %>
+    </section>
+
+    <!-- inclusion du corps -->
+    <main>
+        <!-- Inclusion de la barre de navigation -->
+        <header>
+            <%- include("./navigation.html")%>
+        </header>
+
+        
+        <!-- Partie des images background en animation juste apres la barre de navigation --> 
+        <section id="section_animation">
+            <div id="container-img-background" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#container-img-background" data-slide-to="0" class="active"></li>
+                    <li data-target="#container-img-background" data-slide-to="1"></li>
+                    <li data-target="#container-img-background" data-slide-to="2"></li>
+                    <li data-target="#container-img-background" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> 
+                        <img src="/our_vehicule/26_05_2020_0396_5.jpg" alt="" class="img-animation d-block">
+                        <p class="carousel-caption font-weight-bold rounded">
+                            Venez chez nous et on vous faites visiter toutes nos gammes de voitures.
+                        </p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images_videos/car-bmw-z4-93615.jpg" alt="" class="d-block img-animation">
+                        <p class="carousel-caption font-weight-bold rounded">
+                            Achetez sur nos vehicules et obtenez une garantie satisfaisant.
+                        </p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images_videos/image_arriere_plan.jpg" alt="" class="d-block img-animation">
+                        <p class="carousel-caption font-weight-bold rounded">
+                            Nous vous louons nos vehicules et vous accompagnez pendant toute l' allocation.
+                        </p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images_videos/white-mercedes-benz-cars-120049.jpg" alt="" class="d-block img-animation">
+                        <p class="carousel-caption font-weight-bold rounded">
+                            Beneficiez des offres exceptionels sur nos vehicules pendant 1 ans.
+                        </p>
+                    </div>
+                </div>
+                <a href="#container-img-background" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#container-img-background" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- TITRES 'NOS GAMMES DE VOITURES MARQUE' -->
+        <section class="d-flex justify-content-center my-4">
+            <div class="d-flex justify-content-center align-items-center flex-column rounded px-4" style="box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.2);">
+                <img src="" alt="" class="rounded mb-1" marque="<%=marque%>" id="img_title">
+                <div class="text-muted" style="font-size: 1.1rem;">
+                    Nos voitures de marque <span class="font-weight-bold text-body"><%=marque%></span>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------------- Section de presentation des voitures ----------------->
+        <section id="section_voiture">
+            <div class="py-3"> <!--1-->
+                <div class="d-flex flex-wrap justify-content-center"><!--1-2-->
+                    <!-- presentation des voitures -->
+                    <!-- 1 -->
+                    <% if(voitures.length >= 1){ %>
+                        <% voitures.forEach(function(data){ %>
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="<%=data.numero_voiture %>" nombre-image="<%=data.nombre_photos %>">
+                                <img class="img_for_car rounded" src="<%=data.chemin_image %>" alt="<%=data.modele %>">
+
+                                <div class="text_modele text-muted text-center"><%=data.modele %></div>
+
+                               <%if(data.prix){ %>
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5"><%=data.prix_formater %></span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               <%}else{ %>
+                                <div class="prix-chiffre font-weight-bold d-flex justify-content-center" style="color: rgb(170, 1, 170);">
+                                    prix sur demande
+                                </div>
+                               <%} %>
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="http://localhost:9999/voiture/<%=data.url_modele%>-<%=data.numero_voiture %>"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>     
+                        <%}) %>
+                    <%}else{ %>
+                        <div class="d-flex justify-content-center align-items-center flex-column bg-light p-5">
+                            <i class="fas fa-car mb-1" style="color: black !important; font-size: 1.4rem;" aria-hidden="true"></i>
+                            <p class="text-muted" style="font-size: 0.95rem; letter-spacing: 0.25px;">Nos voitures de marque <%=marque%> sont indisponible pour l'instant. </p>
+                        </div>
+
+                    <%} %>
+                </div>
+                <% if(voitures.length >= 1 && message_voir_plus){ %>
+                    <div class="d-flex justify-content-center">
+                        <a href="http://localhost:9999/voiture/marque/<%=marque%>/page=<%=page%>" id="lien_voir_plus">
+                            <button type="button" class="text-muted rounded" id="button_voir_plus">Voir plus ...</button>
+                        </a> 
+                    </div>
+                <%}else{}%>
+            </div>
+        </section>
+
+        <!-- NOS MARQUES -->
+        <%if(marques.length >= 1){ %>
+            <section class="" style="margin-bottom: 8rem;">
+                <span class="bg-dark rounded text-white font-weight-bold px-4 py-2" id="nos_marque">NOS MARQUES</span>
+                <div id="container_marque" class="d-flex justify-content-start align-items-center mx-auto py-4 mt-4">
+                <%marques.forEach((voiture) =>{ %>
+                    <a href="/voiture/marque/<%=voiture.marque%>" class="mx-2 mx-lg-3">
+                        <img src="" marque="<%=voiture.marque%>" class="image_marque rounded" alt="">
+                    </a>
+                <%}); %>
+                </div>
+            </section>
+        <%} %>
+     
+        <!--  Section discution sur Whatsapp  -->
+        <a href="https://wa.me/221774893206" id="section_parlez_nous">
+            <img src="/icon_logo/whatsapp.svg" alt="icon Whatsapp" title="Parlez-nous sur Whatsapp" class="mb-1" id="icon_parlez_nous">
+        </a>
+                
+        <!-- inclusion du pied -->
+        <footer>
+            <%- include("./footer.html")%>
+        </footer>
+
+
+
+
+
+
+
+
+        <!-- INCLUSION DES SOUS PAGES -->
+
+        <!-- Inclusion de la page permettant d' afficher les autres images pour chaque offre -->
+        <div class="page_details_images disabled_page_details_images"><%- include("./visualise_voiture.html")%></div>
+
+    </main>
+</body>
+
+</html>

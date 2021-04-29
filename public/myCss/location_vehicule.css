@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !-- SECTION SLIDER IMAGES -- */
+#container-img-background{
+    height: 24rem; clip-path: polygon(0 0, 100% 0,100% 97%, 50% 100%, 0 97%);
+}
+.img-animation{
+    width: 100vw !important; height: 24rem !important;
+}
+.carousel-caption{
+    font-size: 1.5rem;
+}
+
+/* !-- SECTION TITRE NOS VOITURES DE LOCATIONS -- */
+#container_icon_car{
+    padding: 1rem 2.5rem;
+}
+.fa-car{
+    font-size: 2rem;
+}
+#title{
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* !-- SECTION LISTE VOITURES LOCATIONS -- */
+#section_voiture_location{
+    width: 1300px;
+    max-width: 100vw !important;
+}
+.location_voiture{
+    width: 13rem; height: 14rem !important; text-decoration: none !important; transition: all 0.5s ease; 
+    opacity: 0.7;
+}
+.location_voiture:hover{
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.2);
+    opacity: 1 !important;
+}
+.img_voiture{
+    height: 8rem;
+}
+.modele_voiture{
+    font-size: 0.9rem; line-height: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    text-overflow: ellipsis !important; letter-spacing: 0.25px;
+}
+.button_consulter{
+    background-color: purple; font-size: 0.8rem; letter-spacing: 0.25px; cursor: pointer;
+}
+
+/* !-- SECTION DES NUMEROS D' APPELS -- */
+#section_numeros_telephones{
+    margin-bottom: 7rem; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.2); width: 700px;
+    max-width: 95vw;
+}
+.offre{
+    font-size: 1rem; color: purple; letter-spacing: 0.25px;
+}
+#telephone_text, #email_text{
+    font-size: 0.8rem;
+}
+.numeros_telephone, #email_value{
+    font-size: 0.9rem; letter-spacing: 0.25px;
+}
