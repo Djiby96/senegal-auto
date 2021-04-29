@@ -318,9 +318,3 @@ ALTER TABLE `image`
 ALTER TABLE `voiture_location`
   ADD CONSTRAINT `voiture_location_ibfk_1` FOREIGN KEY (`numero_voiture`) REFERENCES `voiture` (`numero_voiture`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
-
-
-
--- CREATION DE L'UTILISATEUR
-CREATE USER IF NOT EXISTS Djiby_Sarr_1996 IDENTIFIED BY 'djiby_sarr_1996';
-GRANT ALL PRIVILEGES ON senegal_auto.* to Djiby_Sarr_1996;

@@ -168,7 +168,7 @@
                                 <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
                                     <div class="d-flex flex-column">
                                         <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
-                                        <a href="http://localhost:9999/voiture/<%=data.url_modele%>-<%=data.numero_voiture %>"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/<%=data.url_modele%>-<%=data.numero_voiture %>"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
                                     </div>
                                 </div>
                             </div>     
@@ -183,7 +183,7 @@
                 </div>
                 <% if(voitures.length >=1 && message_voir_plus){ %>
                     <div class="d-flex justify-content-center">
-                        <a href="http://localhost:9999/page=<%=page%>" id="lien_voir_plus">
+                        <a href="https://senegal-auto.herokuapp.com/page=<%=page%>" id="lien_voir_plus">
                             <button type="button" class="text-muted rounded" id="button_voir_plus">Voir plus ...</button>
                         </a> 
                     </div>
@@ -198,7 +198,7 @@
                 <span class="bg-dark rounded text-white font-weight-bold px-4 py-2" id="nos_marque">NOS MARQUES</span>
                 <div id="container_marque" class="d-flex justify-content-start align-items-center mx-auto py-4 mt-4">
                 <%marques.forEach((voiture) =>{ %>
-                    <a href="/voiture/marque/<%=voiture.marque%>" class="mx-2 mx-lg-3">
+                    <a href="https://senegal-auto.herokuapp.com/voiture/marque/<%=voiture.marque%>" class="mx-2 mx-lg-3">
                         <img src="" marque="<%=voiture.marque%>" class="image_marque rounded" alt="">
                     </a>
                 <%}); %>
