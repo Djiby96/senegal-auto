@@ -39,3 +39,13 @@ app.get("/voiture/bmw-4022", page.v5);
 app.get("/voiture/grille-allemande-new-generation-3252", page.v6);
 app.get("/voiture/red-champion-2020-1257", page.v7);
 
+app.get("/location-vehicules", page.v9);
+
+app.get("/garantie-achat", page.v10);
+
+app.get("/reservation-essai", page.v11);
+
+app.get("/contacts", page.v12);
+
+app.get("/presentation", page.v13);
+

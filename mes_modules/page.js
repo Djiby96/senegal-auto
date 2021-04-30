@@ -24,6 +24,21 @@ var page = {
     },
     v8 : (req, res) =>{
         res.render("./accueil.html");
+    },
+    v9 : (req, res) =>{
+        res.render("./v9.html");
+    },
+    v10 : (req, res) =>{
+        res.render("./garantie_achat");
+    },
+    v11: (req, res) =>{
+        res.render("./reservation_essai.html");
+    },
+    v12: (req, res) =>{
+        res.render("./contacts.html");
+    },
+    v13 : (req, res) =>{
+        res.render("./presentation.html");
     }
 }
 
