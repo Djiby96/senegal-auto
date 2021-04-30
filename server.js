@@ -28,10 +28,6 @@ app.use(express.static(path.join(__dirname, "img")));
 app.use(express.static(path.join(__dirname, "mes_modules")));
 app.use(express.static(path.join(__dirname, "views")));
 
-/* ---  GESTION DE CERTAINES FONCTIONNALITES DE L' APPLICATION COTE CLIENT ET SERVEUR--- */
-app.use(appManagement.gestion_message);
-//app.use(appManagement.error_404);
-
 
 app.get("https://senegal-auto.herokuapp.com", page.v8);
 
