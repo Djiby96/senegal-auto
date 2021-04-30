@@ -29,13 +29,13 @@ app.use(express.static(path.join(__dirname, "mes_modules")));
 app.use(express.static(path.join(__dirname, "views")));
 
 
-app.get("https://senegal-auto.herokuapp.com", page.v8);
+app.get("", page.v8);
 
-app.get("https://senegal-auto.herokuapp.com/voiture/kia-level-18-2728", page.v1);
-app.get("https://senegal-auto.herokuapp.com/voiture/mercedes-level-vitesse-2908", page.v2);
-app.get("https://senegal-auto.herokuapp.com/voiture/208-gt-suedois-5562", page.v3);
-app.get("https://senegal-auto.herokuapp.com/voiture/american-great-teager-car-5948", page.v4);
-app.get("https://senegal-auto.herokuapp.com/voiture/bmw-4022", page.v5);
-app.get("https://senegal-auto.herokuapp.com/voiture/grille-allemande-new-generation-3252", page.v6);
-app.get("https://senegal-auto.herokuapp.com/voiture/red-champion-2020-1257", page.v7);
+app.get("/voiture/kia-level-18-2728", page.v1);
+app.get("/voiture/mercedes-level-vitesse-2908", page.v2);
+app.get("/voiture/208-gt-suedois-5562", page.v3);
+app.get("/voiture/american-great-teager-car-5948", page.v4);
+app.get("/voiture/bmw-4022", page.v5);
+app.get("/voiture/grille-allemande-new-generation-3252", page.v6);
+app.get("/voiture/red-champion-2020-1257", page.v7);
 
