@@ -120,91 +120,161 @@
                 <p class="text-center text-muted" id="voitures">Toutes nos gammes de vehicules</p>
             </div>
         </section>
-
-        <!-- SECTION DU Triage des voitures -->
-        <section class="d-flex justify-content-center mb-5">
-            <select name="etat" class="text-muted rounded mr-3" id="select_type_car">
-                <option value="" disabled selected>type voiture</option>
-                <option value="Neuf" class="type_car">Neuf</option>
-                <option value="Occasion" class="type_car">Occasion</option>
-            </select>
-            <select name="sort" class="text-muted rounded" id="select_filtre">
-                <option value="" disabled selected>Trie: </option>
-                <option value="price_asc" class="filtre_option">Prix croissant</option>
-                <option value="price_desc" class="filtre_option">Prix decroissant</option>
-                <option value="nouveaute" class="filtre_option">Nouveaute</option>
-                <option value="ancienne" class="filtre_option">Ancienne</option>
-            </select>
-            
-
-        </section>
-
-
+        
         <!-------------------------------------- Section de presentation des voitures ----------------->
         <section id="section_voiture">
             <div class="py-3"> <!--1-->
                 <div class="d-flex flex-wrap justify-content-center"><!--1-2-->
                     <!-- presentation des voitures -->
-                    <!-- 1 -->
-                    <% if(voitures.length >= 1){ %>
-                        <% voitures.forEach(function(data){ %>
-                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="<%=data.numero_voiture %>" nombre-image="<%=data.nombre_photos %>">
-                                <img class="img_for_car rounded" src="<%=data.chemin_image %>" alt="<%=data.modele %>">
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="2728" nombre-image="7">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_2728_1.jpg" alt="Kia Level 18">
 
-                                <div class="text_modele text-muted text-center"><%=data.modele %></div>
+                                <div class="text_modele text-muted text-center">Kia Level 18</div>
 
-                               <%if(data.prix){ %>
+                               
                                 <div class="d-flex justify-content-between justify-content-start">
-                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5"><%=data.prix_formater %></span>
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">4 000 000</span>
                                     <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
                                 </div>
-                               <%}else{ %>
-                                <div class="prix-chiffre font-weight-bold d-flex justify-content-center" style="color: rgb(170, 1, 170);">
-                                    prix sur demande
-                                </div>
-                               <%} %>
+                               
 
                                 <!-- Details et previsualiastion du contenu pour chaque voiture -->
                                 <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
                                     <div class="d-flex flex-column">
                                         <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
-                                        <a href="https://senegal-auto.herokuapp.com/voiture/<%=data.url_modele%>-<%=data.numero_voiture %>"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/kia-level-18-2728"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
                                     </div>
                                 </div>
                             </div>     
-                        <%}) %>
-                    <%}else{ %>
-                        <div class="d-flex justify-content-center align-items-center flex-column bg-light p-5">
-                            <i class="fas fa-car mb-1" style="color: black !important; font-size: 1.4rem;" aria-hidden="true"></i>
-                            <p class="text-muted" style="font-size: 0.95rem; letter-spacing: 0.25px;">Pas de voiture trouve !</p>
-                        </div>
+                        
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="2908" nombre-image="4">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_2908_1.jpg" alt="Mercedes Level Vitesse">
 
-                    <%} %>
+                                <div class="text_modele text-muted text-center">Mercedes Level Vitesse</div>
+
+                               
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">4 000 000</span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/mercedes-level-vitesse-2908"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>     
+                        
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="5562" nombre-image="7">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_5562_1.jpg" alt="208-GT Suedois">
+
+                                <div class="text_modele text-muted text-center">208-GT Suedois</div>
+
+                               
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">8 000 000</span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/208-gt-suedois-5562"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>     
+                        
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="5948" nombre-image="6">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_5948_1.jpg" alt="American Great Teager Car">
+
+                                <div class="text_modele text-muted text-center">American Great Teager Car</div>
+
+                               
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">5 000 000</span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/american-great-teager-car-5948"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>     
+                        
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="4022" nombre-image="9">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_4022_1.jpg" alt="BMW">
+
+                                <div class="text_modele text-muted text-center">BMW</div>
+
+                               
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">3 500 000</span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/bmw-4022"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>     
+                        
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="3252" nombre-image="7">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_3252_1.jpg" alt="Grille Allemande New Generation">
+
+                                <div class="text_modele text-muted text-center">Grille Allemande New Generation</div>
+
+                               
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">2 500 000</span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/grille-allemande-new-generation-3252"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>     
+                        
+                            <div class="my-container-offre m-2 mx-lg-3 p-1 rounded" numero-voiture="1257" nombre-image="7">
+                                <img class="img_for_car rounded" src="/our_vehicule/02_04_2021_1257_1.jpg" alt="RED CHAMPION 2020">
+
+                                <div class="text_modele text-muted text-center">RED CHAMPION 2020</div>
+
+                               
+                                <div class="d-flex justify-content-between justify-content-start">
+                                    <span class="prix-chiffre text-muted mr-3 mr-lg-5">5 000 000</span>
+                                    <span class="my-prix-fcfa px-3 px-lg-4 bg-success text-white">F cfa</span>
+                                </div>
+                               
+
+                                <!-- Details et previsualiastion du contenu pour chaque voiture -->
+                                <div class="border my-container-detail my_container_detail_disabled d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <button type="button" class="my-visualise btn-primary mb-3 text-white">Visualiser</button>
+                                        <a href="https://senegal-auto.herokuapp.com/voiture/red-champion-2020-1257"><button type="button" class="my-details btn-success text-white">Voir details</button></a>
+                                    </div>
+                                </div>
+                            </div>      
                 </div>
-                <% if(voitures.length >=1 && message_voir_plus){ %>
-                    <div class="d-flex justify-content-center">
-                        <a href="https://senegal-auto.herokuapp.com/page=<%=page%>" id="lien_voir_plus">
-                            <button type="button" class="text-muted rounded" id="button_voir_plus">Voir plus ...</button>
-                        </a> 
-                    </div>
-                <%}else{}%>
             </div>
         </section> 
-
-
-        <!-- NOS MARQUES -->
-        <%if(marques.length >= 1){ %>
-            <section class="my-5">
-                <span class="bg-dark rounded text-white font-weight-bold px-4 py-2" id="nos_marque">NOS MARQUES</span>
-                <div id="container_marque" class="d-flex justify-content-start align-items-center mx-auto py-4 mt-4">
-                <%marques.forEach((voiture) =>{ %>
-                    <a href="https://senegal-auto.herokuapp.com/voiture/marque/<%=voiture.marque%>" class="mx-2 mx-lg-3">
-                        <img src="" marque="<%=voiture.marque%>" class="image_marque rounded" alt="">
-                    </a>
-                <%}); %>
-                </div>
-            </section>
-        <%} %>
 
 
         <!--------- Section de l' icone services avec le titre 'Nos services' ---------->
