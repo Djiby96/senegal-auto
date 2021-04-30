@@ -3,15 +3,9 @@
 const express = require("express");
 const path = require("path");
 const ejs = require("ejs");
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
-const multer = require("multer"),
-      session = require("express-session"),
-      flash = require("connect-flash");
 
 //Initialisation de l' application
 const app = express();
-const multerOption = new multer();
 
 //exportations de mes modules
 const page = require("./mes_modules/page.js"),
@@ -21,10 +15,6 @@ const page = require("./mes_modules/page.js"),
 // Initialisation de mes modules
 
 //Initialisation de  l'application pour la rendu de nos moteurs de modeles(vues) et des autres modules
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieParser());
-app.use(session({secret: "hbdhj738cnwwwusd78HDGT777GGSYYEWhshsueuhdhdhdhdshdhfujd737837292299999", resave: false, saveUninitialized: true}));
-app.use(flash());
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 
