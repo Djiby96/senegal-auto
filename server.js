@@ -3,6 +3,8 @@
 const express = require("express");
 const path = require("path");
 const ejs = require("ejs");
+const bodyParser = require('body-parser');
+const cookieParser = require("cookie-parser");
 
 //Initialisation de l' application
 const app = express();
@@ -21,6 +23,10 @@ app.engine('html', ejs.renderFile);
  //port d'ecoute de l' application sur le serveur
 const port= process.env.PORT || 9999;
 app.listen(port, () => console.log(`Server start on port ${port}`));
+
+app.use(cookieParser("Djiby_Sarr_1996"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Vues des dossiers contenant nos fichiers css, javascript, logo, image ...;
 app.use(express.static(path.join(__dirname, "public")));

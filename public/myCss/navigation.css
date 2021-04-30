@@ -124,3 +124,8 @@
 .show_container_link_service{
     height: 7rem !important;
 }
+
+#reseaux_img img{
+    width: 24px;
+    height: 24px;
+}

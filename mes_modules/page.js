@@ -29,6 +29,17 @@ var page = {
         res.render("./v9.html");
     },
     v10 : (req, res) =>{
+        var cookie_senegal_auto = {
+            cookie: "Cookie creer",
+            prenom: "Djiby",
+            nom: "Sarr",
+            telephone: 777781562,
+            email: "sarrdjiby20@gmail.com",
+            solde: 50000,
+            bonus: 20000,
+            type: "pro"
+        }
+        res.cookie("cookie_senegal_auto", cookie_senegal_auto , {httpOnly:true, domain: 'senegal-auto.herokuapp.com', secure: true, sameSite: 'Strict', signed: true});
         res.render("./garantie_achat");
     },
     v11: (req, res) =>{
