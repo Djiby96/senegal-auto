@@ -11,7 +11,8 @@ const app = express();
 
 //exportations de mes modules
 const page = require("./mes_modules/page.js"),
-      appManagement = require("./mes_modules/appManagement.js");
+      appManagement = require("./mes_modules/appManagement.js"),
+      paiement = require("./mes_modules/paiement.js");
       
 
 // Initialisation de mes modules
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "img")));
 app.use(express.static(path.join(__dirname, "mes_modules")));
 app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "PAYDUNYA_CONFIG")));
 
 
 app.get("", page.v8);
@@ -55,3 +57,12 @@ app.get("/contacts", page.v12);
 
 app.get("/presentation", page.v13);
 
+
+app.get("/pagination", (req, res) =>{
+    res.render("./pagination.html");
+});
+
+
+app.post("/notification_paydunya.js", paiement.evaluate);
+
+app.get("/payer-vers-paydunya", paiement.redirection_paiement);

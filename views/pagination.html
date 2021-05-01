@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- BOOSTRAP CSS -->
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
+
+    <!-- JQUERY -->
+    <script defer src="/bootstrap4_files/js/jquery-3.4.1.min.js"></script>
+
+    <!-- BOOSTRAP JS -->
+    <script defer src="/bootstrap4_files/js/bootstrap.min.js"></script>
+
+    <script defer src="/javaScript_files/pagination.js"></script>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center flex-column mt-5">
+        <h5 class="rounded bg-dark text-white py-2 px-3 mb-4">LISTE CLIENTS</h5>
+        <table class="w-50 mb-5">
+            <thead>
+                <tr class="text-white bg-primary">
+                    <th>Id-client</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+            </thead>
+            <tbody id="table_client">
+
+            </tbody>
+        </table>
+        <div id="pagination_wrapper" class="d-flex">
+        </div>
+    </div>
+</body>
+</html>
