@@ -5,11 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/bootstrap4_files/css/bootstrap.min.css">
 </head>
 <body >
 
-    <div class="text-center font-weight-bold" style="font-size: 3rem; margin-top: 5rem;">
-        Le statut du paiement est <%=status %> et le montant total est egal a <%=amount %> FCFA
+    <div class="text-center font-weight-bold text-center" style="font-size: 3rem; margin-top: 5rem; width: 50vw; max-width: 90vw;">
+        Transaction <%=status %>, le montant de la transation est : <span style="font-weight: bolder;"><%=amount %></span>
+        <br>
+        Informations du proprietaire : 
+        <br>
+        <div class="text-center mb-3">
+            NOM-COMPLET : <%=user.name %> <br>
+            Email : <%=user.email %> <br>
+            Telephone : <%=user.phone %>
+        </div>
+        <div class="text-center">
+            <a href="<%=facture_link%>">Download Facture ici</a>
+        </div>
     </div>
     
 </body>

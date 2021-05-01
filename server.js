@@ -63,6 +63,8 @@ app.get("/pagination", (req, res) =>{
 });
 
 
-app.post("/notification_paydunya.js", paiement.evaluate);
+app.post("/IPN/notification_paydunya.js", paiement.evaluate);
 
-app.get("/payer-vers-paydunya", paiement.redirection_paiement);
+app.get("/acces-compte/payer-vers-paydunya", paiement.redirection_paiement);
+
+app.get("/acces-compte/status-paiement", paiement.finalEvaluate);
